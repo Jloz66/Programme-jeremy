@@ -1,1 +1,979 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c2{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c1"><span class="c0">&lt;!doctype html&gt;</span></p><p class="c1"><span class="c0">&lt;html lang=&quot;fr&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;head&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;meta charset=&quot;utf-8&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;title&gt;Programme J&eacute;r&eacute;my &mdash; Haut du corps + Abdos&lt;/title&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;style&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; :root{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --bg:#0b0f14; --card:#111826; --muted:#94a3b8; --text:#e5e7eb;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --accent:#22c55e; --accent2:#3b82f6; --danger:#ef4444; --warn:#f59e0b;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --border:#1f2937;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --shadow: 0 10px 30px rgba(0,0,0,.35);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --radius:16px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, &quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; *{box-sizing:border-box}</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; body{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; margin:0; font-family:var(--sans);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background:</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.18), transparent),</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(1000px 600px at 100% 0%, rgba(34,197,94,.18), transparent),</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; var(--bg);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color:var(--text);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; header{ padding:22px 16px 10px; max-width:1100px; margin:0 auto; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .title{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .badge{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-size:12px; padding:6px 10px; border:1px solid var(--border); border-radius:999px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color:var(--muted); background: rgba(17,24,38,.6);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; h1{ margin:0; font-size:22px; letter-spacing:.2px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .sub{ margin:10px 0 0; color:var(--muted); line-height:1.45; font-size:14px; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .wrap{ max-width:1100px; margin:0 auto; padding:12px 16px 28px; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .toolbar{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:grid; gap:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.6); border:1px solid var(--border);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:12px; border-radius:var(--radius); box-shadow: var(--shadow);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .toolbarRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .toolbarRow.space{ justify-content:space-between; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .group{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; button{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid var(--border);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.85);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color:var(--text);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:10px 12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius:12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; cursor:pointer;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-weight:700;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; button:hover{border-color: rgba(59,130,246,.6)}</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .btn-accent{ background: rgba(34,197,94,.15); border-color: rgba(34,197,94,.35); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .btn-danger{ background: rgba(239,68,68,.12); border-color: rgba(239,68,68,.35); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .btn-warn{ background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.35); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .btn-blue{ background: rgba(59,130,246,.14); border-color: rgba(59,130,246,.35); }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .select, .input{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid var(--border);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.85);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color:var(--text);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:10px 12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius:12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-weight:700;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; min-width: 170px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .input{ min-width: 120px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .hint{ color:var(--muted); font-size:12px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .mono{ font-family: var(--mono); }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .grid{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:grid; gap:12px; margin-top:12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(12, 1fr);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .card{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; grid-column: span 12;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.6);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid var(--border);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: var(--radius);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: var(--shadow);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; overflow:hidden;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .card-h{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:14px 14px 10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-bottom:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .card-h h2{ margin:0; font-size:16px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .meta{ color:var(--muted); font-size:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .pill{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:4px 8px; border-radius:999px; border:1px solid var(--border);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(11,15,20,.35); color:var(--muted);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .pill.good{ border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.10); color: #b7f7c8; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .pill.warn{ border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.10); color: #ffe3a3; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .pill.bad{ border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.10); color: #ffb4b4; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .content{ padding:12px 14px 14px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .ex{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius:14px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(11,15,20,.35);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .ex-top{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; gap:10px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .ex-name{ font-weight:900; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .ex-desc{ color:var(--muted); font-size:12px; margin-top:6px; line-height:1.35; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .row{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .check{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; gap:8px; align-items:center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:8px 10px; border-radius:12px; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.55);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; input[type=&quot;checkbox&quot;]{ width:18px; height:18px; accent-color: var(--accent); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .small{ font-size:12px; color:var(--muted); }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .video{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; width:100%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; aspect-ratio: 16/9;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background:#000;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .progress{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; height:10px; border-radius:999px; background: rgba(148,163,184,.15); overflow:hidden;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .bar{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; height:100%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; width:0%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(90deg, rgba(34,197,94,.9), rgba(59,130,246,.9));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .panel{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius:14px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(11,15,20,.35);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .timerBox{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .timerLeft{ display:flex; flex-wrap:wrap; gap:10px; align-items:end; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .timerDisplay{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; min-width: 160px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:10px 12px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius:14px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.55);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .timerBig{ font-size:20px; font-weight:900; letter-spacing: .5px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .timerSmall{ font-size:12px; color:var(--muted); margin-top:2px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .toggle{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; gap:8px; align-items:center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding:8px 10px; border-radius:12px; border:1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(17,24,38,.55);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-weight:800;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color:var(--muted);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .toggle input{ width:18px; height:18px; accent-color: var(--accent2); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; details{ margin-top:12px; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; summary{ cursor:pointer; font-weight:900; color: var(--text); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; table{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; width:100%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-collapse: collapse;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 13px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; th, td{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-bottom: 1px solid rgba(31,41,55,.7);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 8px 6px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; text-align:left;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--muted);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; th{ color: var(--text); }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .kpi{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display:flex; flex-wrap:wrap; gap:8px; align-items:center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; @media (min-width: 900px){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; .card{ grid-column: span 6; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; .toolbar{ grid-template-columns: 1fr; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &lt;/style&gt;</span></p><p class="c1"><span class="c0">&lt;/head&gt;</span></p><p class="c1"><span class="c0">&lt;body&gt;</span></p><p class="c1"><span class="c0">&lt;header&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;title&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h1&gt;&#128170; Programme J&eacute;r&eacute;my &mdash; Haut du corps + Abdos&lt;/h1&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;span class=&quot;badge&quot; id=&quot;weekLabel&quot;&gt;&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;span class=&quot;badge&quot;&gt;&#9917; Foot : mardi &amp; vendredi&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;span class=&quot;badge&quot;&gt;&#127919; Objectif : &eacute;paules / pecs / bras / abdos + -poign&eacute;es d&rsquo;amour&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;p class=&quot;sub&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; 3 s&eacute;ances muscu + 1 optionnelle &bull; Halt&egrave;res 1&ndash;10 kg &bull; Suivi + poids + mesures &bull; Sauvegarde automatique.</span></p><p class="c1"><span class="c0">&nbsp; &lt;/p&gt;</span></p><p class="c1"><span class="c0">&lt;/header&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &lt;!-- TOOLBAR --&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;toolbar&quot;&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;toolbarRow space&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;group&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Intensit&eacute;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;select&quot; id=&quot;level&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;debutant&quot;&gt;D&eacute;butant (reps bas + contr&ocirc;le)&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;standard&quot; selected&gt;Standard (bon rythme)&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;tonique&quot;&gt;Tonique (reps haut + peu de repos)&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Repos (sec)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;select&quot; id=&quot;rest&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;60&quot;&gt;60&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;75&quot; selected&gt;75&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;90&quot;&gt;90&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Objectif timer</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;select&quot; id=&quot;timerMode&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;rest&quot; selected&gt;Repos entre s&eacute;ries&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;custom&quot;&gt;Dur&eacute;e personnalis&eacute;e&lt;/option&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot; id=&quot;customWrap&quot; style=&quot;display:none&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dur&eacute;e (sec)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input class=&quot;input&quot; id=&quot;customSeconds&quot; type=&quot;number&quot; min=&quot;10&quot; step=&quot;5&quot; value=&quot;60&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;group&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-accent&quot; id=&quot;markToday&quot;&gt;&#9989; Marquer la s&eacute;ance du jour&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-danger&quot; id=&quot;resetWeek&quot;&gt;&#129529; R&eacute;initialiser la semaine&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;!-- TIMER PANEL --&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;timerBox&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;timerLeft&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;timerDisplay&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;timerBig mono&quot; id=&quot;timerText&quot;&gt;01:15&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;timerSmall&quot; id=&quot;timerHint&quot;&gt;Timer pr&ecirc;t &bull; mode: repos&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;group&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-blue&quot; id=&quot;timerStart&quot;&gt;&#9654;&#65039; Start&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-warn&quot; id=&quot;timerPause&quot;&gt;&#9208; Pause&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;timerReset&quot;&gt;&#10226; Reset&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;toggle&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;checkbox&quot; id=&quot;autoTimer&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Auto-timer quand je coche une s&eacute;rie</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;toggle&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;checkbox&quot; id=&quot;vibrate&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vibration (si dispo)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;toggle&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;checkbox&quot; id=&quot;sound&quot; checked /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BIP d&eacute;but/fin</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;kpi&quot; id=&quot;kpi&quot;&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div style=&quot;margin-top:10px&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;bar&quot; id=&quot;weekBar&quot; style=&quot;width:0%&quot;&gt;&lt;/div&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;small&quot; style=&quot;margin-top:6px&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#128204; Astuce : vise &lt;b&gt;2 reps en r&eacute;serve&lt;/b&gt;. Forme propre &gt; charge.</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;details&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;summary&gt;&#128207; Mes mesures (poids / tour de taille / historique)&lt;/summary&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row&quot; style=&quot;margin-top:10px&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot;&gt;Poids (kg)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input class=&quot;input&quot; id=&quot;mWeight&quot; type=&quot;number&quot; min=&quot;30&quot; max=&quot;200&quot; step=&quot;0.1&quot; placeholder=&quot;85.0&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot;&gt;Tour de taille (cm)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input class=&quot;input&quot; id=&quot;mWaist&quot; type=&quot;number&quot; min=&quot;40&quot; max=&quot;160&quot; step=&quot;0.5&quot; placeholder=&quot;ex: 92&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot; style=&quot;flex:1; min-width:220px&quot;&gt;Note</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input class=&quot;input&quot; id=&quot;mNote&quot; type=&quot;text&quot; placeholder=&quot;ex: semaine charg&eacute;e, bon sommeil&hellip;&quot; style=&quot;width:100%; min-width:220px&quot;/&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-accent&quot; id=&quot;addMeasure&quot;&gt;&#10133; Ajouter&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-danger&quot; id=&quot;clearMeasures&quot;&gt;&#128465;&#65039; Effacer historique&lt;/button&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;measureTableWrap&quot;&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/details&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &lt;!-- CARDS --&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;grid&quot; id=&quot;cards&quot;&gt;&lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;panel&quot; style=&quot;margin-top:12px&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &#9888;&#65039; &lt;b&gt;Note sant&eacute;&lt;/b&gt; : douleur inhabituelle (&eacute;paule / bas du dos) &rArr; stoppe l&rsquo;exercice et remplace-le.</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;br/&gt;&#128293; &lt;b&gt;Abdos &amp; poign&eacute;es d&rsquo;amour&lt;/b&gt; : muscu + gainage + l&eacute;ger d&eacute;ficit calorique + r&eacute;gularit&eacute; (8&ndash;12 semaines).</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;script&gt;</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // PROGRAMME + VID&Eacute;OS</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; const program = [</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; day: &quot;Lundi&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; tag: &quot;Pecs &bull; &Eacute;paules &bull; Abdos&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note: &quot;S&eacute;ance principale haut du corps (volume pecs/&eacute;paules).&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; blocks: [</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Pompes&quot;, sets:3, reps:{debutant:&quot;8&ndash;10&quot;,standard:&quot;10&ndash;15&quot;,tonique:&quot;12&ndash;18&quot;}, desc:&quot;Gainage serr&eacute;, poitrine vers le sol, remonte en bloc. Variante genoux si besoin.&quot;, video:&quot;https://www.youtube.com/embed/IODxDxX7oi4&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;D&eacute;velopp&eacute; couch&eacute; au sol (halt&egrave;res)&quot;, sets:3, reps:{debutant:&quot;8&ndash;10&quot;,standard:&quot;10&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Coudes ~45&deg;, contr&ocirc;le en bas, pousse fort. Id&eacute;al sans banc.&quot;, video:&quot;https://www.youtube.com/embed/uUGDRwge4F8&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;D&eacute;velopp&eacute; &eacute;paules (halt&egrave;res)&quot;, sets:3, reps:{debutant:&quot;8&ndash;10&quot;,standard:&quot;10&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Buste gain&eacute;, presse au-dessus de la t&ecirc;te sans cambrer.&quot;, video:&quot;https://www.youtube.com/embed/qEwKCR5JCog&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;&Eacute;l&eacute;vations lat&eacute;rales&quot;, sets:3, reps:{debutant:&quot;12&quot;,standard:&quot;12&ndash;15&quot;,tonique:&quot;15&ndash;20&quot;}, desc:&quot;Monte jusqu&rsquo;&agrave; l&rsquo;&eacute;paule, lent &agrave; la descente. Charge l&eacute;g&egrave;re (1&ndash;6kg souvent).&quot;, video:&quot;https://www.youtube.com/embed/3VcKaXpzqRo&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Gainage (planche)&quot;, sets:3, reps:{debutant:&quot;30&ndash;40 sec&quot;,standard:&quot;40&ndash;60 sec&quot;,tonique:&quot;60&ndash;75 sec&quot;}, desc:&quot;Fesses ni trop haut ni trop bas. Respire, nombril rentr&eacute;.&quot;, video:&quot;https://www.youtube.com/embed/pSHjTRCQxIw&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Gainage lat&eacute;ral (sp&eacute;cial &ldquo;poign&eacute;es d&rsquo;amour&rdquo;)&quot;, sets:3, reps:{debutant:&quot;20&ndash;30 sec / c&ocirc;t&eacute;&quot;,standard:&quot;30&ndash;45 sec / c&ocirc;t&eacute;&quot;,tonique:&quot;45&ndash;60 sec / c&ocirc;t&eacute;&quot;}, desc:&quot;Hanche haute, &eacute;paule au-dessus du coude, corps align&eacute;.&quot;, video:&quot;https://www.youtube.com/embed/XeN4pEZZJNI&quot; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; ]</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; { day:&quot;Mardi&quot;, tag:&quot;&#9917; Foot&quot;, note:&quot;Match / entra&icirc;nement. Hydratation + d&icirc;ner l&eacute;ger.&quot;, blocks:[] },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; day: &quot;Mercredi&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; tag: &quot;Dos &bull; Bras &bull; Abdos&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note: &quot;Posture + dos (cl&eacute; pour &ldquo;haut du corps qui se tient&rdquo;).&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; blocks: [</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Rowing unilat&eacute;ral (halt&egrave;re)&quot;, sets:3, reps:{debutant:&quot;10 / c&ocirc;t&eacute;&quot;,standard:&quot;10&ndash;12 / c&ocirc;t&eacute;&quot;,tonique:&quot;12&ndash;15 / c&ocirc;t&eacute;&quot;}, desc:&quot;Tire le coude vers la hanche, omoplate se serre, dos plat.&quot;, video:&quot;https://www.youtube.com/embed/pYcpY20QaE8&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Rowing buste pench&eacute; (2 halt&egrave;res)&quot;, sets:3, reps:{debutant:&quot;10&quot;,standard:&quot;10&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Charni&egrave;re de hanches, dos neutre, tire vers le bas des c&ocirc;tes.&quot;, video:&quot;https://www.youtube.com/embed/yJ8NTl5RaTk&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Curl biceps&quot;, sets:3, reps:{debutant:&quot;10&ndash;12&quot;,standard:&quot;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Coudes coll&eacute;s, monte sans balancer. Contr&ocirc;le &agrave; la descente.&quot;, video:&quot;https://www.youtube.com/embed/ykJmrZ5v0Oo&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Extension triceps au-dessus de la t&ecirc;te (1 halt&egrave;re)&quot;, sets:3, reps:{debutant:&quot;10&ndash;12&quot;,standard:&quot;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Coudes serr&eacute;s, descends derri&egrave;re la t&ecirc;te, remonte en contr&ocirc;lant.&quot;, video:&quot;https://www.youtube.com/embed/2-LAMcpzODU&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Dead Bug (abdos profonds)&quot;, sets:3, reps:{debutant:&quot;8 / c&ocirc;t&eacute;&quot;,standard:&quot;10 / c&ocirc;t&eacute;&quot;,tonique:&quot;12 / c&ocirc;t&eacute;&quot;}, desc:&quot;Bas du dos coll&eacute; au sol, mouvements lents, respiration contr&ocirc;l&eacute;e.&quot;, video:&quot;https://www.youtube.com/embed/bxn9FBrt4-A&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Relev&eacute;s de jambes au sol&quot;, sets:3, reps:{debutant:&quot;8&ndash;10&quot;,standard:&quot;10&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Ne cambre pas : mains sous les fesses si besoin. Descente lente.&quot;, video:&quot;https://www.youtube.com/embed/Wp4BlxcFTkE&quot; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; ]</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; day: &quot;Jeudi&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; tag: &quot;Mix haut du corps + Gainage (plus l&eacute;ger)&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note: &quot;S&eacute;ance &ldquo;qualit&eacute;&rdquo; : technique + pompe la posture sans te cramer avant le foot.&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; blocks: [</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Pompes serr&eacute;es (triceps + pecs)&quot;, sets:3, reps:{debutant:&quot;6&ndash;8&quot;,standard:&quot;8&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Mains plus proches, coudes pr&egrave;s du corps. Variante genoux ok.&quot;, video:&quot;https://www.youtube.com/embed/0pkjOk0EiAk&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;D&eacute;velopp&eacute; &eacute;paules (halt&egrave;res)&quot;, sets:3, reps:{debutant:&quot;8&ndash;10&quot;,standard:&quot;10&ndash;12&quot;,tonique:&quot;12&ndash;15&quot;}, desc:&quot;Buste gain&eacute;, pas de cambrure.&quot;, video:&quot;https://www.youtube.com/embed/qEwKCR5JCog&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Rowing unilat&eacute;ral (halt&egrave;re)&quot;, sets:3, reps:{debutant:&quot;10 / c&ocirc;t&eacute;&quot;,standard:&quot;10&ndash;12 / c&ocirc;t&eacute;&quot;,tonique:&quot;12&ndash;15 / c&ocirc;t&eacute;&quot;}, desc:&quot;Coude vers la hanche, omoplate active.&quot;, video:&quot;https://www.youtube.com/embed/pYcpY20QaE8&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;&Eacute;l&eacute;vations lat&eacute;rales&quot;, sets:3, reps:{debutant:&quot;12&quot;,standard:&quot;12&ndash;15&quot;,tonique:&quot;15&ndash;20&quot;}, desc:&quot;Focus largeur d&rsquo;&eacute;paules. Lenteur &gt; charge.&quot;, video:&quot;https://www.youtube.com/embed/3VcKaXpzqRo&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Mountain climbers (cardio + abdos)&quot;, sets:3, reps:{debutant:&quot;20 sec&quot;,standard:&quot;30 sec&quot;,tonique:&quot;40 sec&quot;}, desc:&quot;Hanches stables, rythme r&eacute;gulier.&quot;, video:&quot;https://www.youtube.com/embed/CQk4MHY2_Tc&quot; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Gainage lat&eacute;ral&quot;, sets:3, reps:{debutant:&quot;20&ndash;30 sec / c&ocirc;t&eacute;&quot;,standard:&quot;30&ndash;45 sec / c&ocirc;t&eacute;&quot;,tonique:&quot;45&ndash;60 sec / c&ocirc;t&eacute;&quot;}, desc:&quot;Alignement parfait. Hanche haute.&quot;, video:&quot;https://www.youtube.com/embed/XeN4pEZZJNI&quot; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; ]</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; { day:&quot;Vendredi&quot;, tag:&quot;&#9917; Foot&quot;, note:&quot;Match / entra&icirc;nement. &Eacute;tirements + sommeil.&quot;, blocks:[] },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; day:&quot;Samedi (optionnel)&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; tag:&quot;Abdos + finisher (15&ndash;20 min)&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note:&quot;Courte s&eacute;ance pour acc&eacute;l&eacute;rer la perte de gras (sans t&rsquo;&eacute;puiser).&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; blocks:[</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; { name:&quot;Circuit x 3 tours (sans charge)&quot;, sets:3, reps:{debutant:&quot;Rythme cool&quot;,standard:&quot;Rythme r&eacute;gulier&quot;,tonique:&quot;Rythme soutenu&quot;}, desc:&quot;1) Jumping jacks 45s &bull; 2) Mountain climbers 30s &bull; 3) Planche 45s &bull; 4) Russian twists 20 reps &bull; Repos 60s&quot;, video:&quot;https://www.youtube.com/embed/nmwgirgXLYM&quot; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; ]</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; { day:&quot;Dimanche&quot;, tag:&quot;Repos / marche&quot;, note:&quot;Marche 30&ndash;60 min si possible (top pour la perte de gras).&quot;, blocks:[] }</span></p><p class="c1"><span class="c0">&nbsp; ];</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // DATE SEMAINE (LUNDI -&gt; DIMANCHE)</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; function getMonday(d=new Date()){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const date = new Date(d);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const day = (date.getDay()+6)%7; // Monday=0</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; date.setHours(0,0,0,0);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; date.setDate(date.getDate()-day);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return date;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; const monday = getMonday();</span></p><p class="c1"><span class="c0">&nbsp; const sunday = new Date(monday); sunday.setDate(sunday.getDate()+6);</span></p><p class="c1"><span class="c0">&nbsp; const weekKey = `jeremy_week_${monday.toISOString().slice(0,10)}`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // STATE + STORAGE</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; const stateDefault = {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; checks:{}, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // per set checkbox</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; doneDays:{}, &nbsp; &nbsp; &nbsp; &nbsp; // dayIndex =&gt; true/false</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; weights:{}, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// per exercise weight used</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; settings:{ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // timer + toggles</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; autoTimer:true,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; vibrate:false,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; sound:true,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; restSeconds:75,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; timerMode:&quot;rest&quot;,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; customSeconds:60,</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; level:&quot;standard&quot;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; },</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; measures:[] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// array of {ts, weight, waist, note}</span></p><p class="c1"><span class="c0">&nbsp; };</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; const state = JSON.parse(localStorage.getItem(weekKey) || &quot;null&quot;) || structuredClone(stateDefault);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function save(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; localStorage.setItem(weekKey, JSON.stringify(state));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderProgressBars();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderMeasures();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // HELPERS</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; const $cards = document.getElementById(&quot;cards&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $weekLabel = document.getElementById(&quot;weekLabel&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $level = document.getElementById(&quot;level&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $rest = document.getElementById(&quot;rest&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $timerMode = document.getElementById(&quot;timerMode&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $customWrap = document.getElementById(&quot;customWrap&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $customSeconds = document.getElementById(&quot;customSeconds&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $autoTimer = document.getElementById(&quot;autoTimer&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $vibrate = document.getElementById(&quot;vibrate&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $sound = document.getElementById(&quot;sound&quot;);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function fmtDate(d){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return d.toLocaleDateString(&quot;fr-FR&quot;,{weekday:&quot;short&quot;, day:&quot;2-digit&quot;, month:&quot;2-digit&quot;});</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; $weekLabel.textContent = `&#128197; ${fmtDate(monday)} &rarr; ${fmtDate(sunday)} (sauvegarde auto)`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function dayDateFromIndex(dayIndex){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const d = new Date(monday);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; d.setDate(d.getDate()+dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return d;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; function isToday(dayIndex){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const d = dayDateFromIndex(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const now = new Date();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return d.toDateString() === now.toDateString();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function exerciseId(dayIndex, exIndex){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return `${dayIndex}_${exIndex}`;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function totalChecksForDay(dayIndex){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const day = program[dayIndex];</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; let total = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; day.blocks.forEach(b =&gt; total += b.sets);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return total;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function checkedForDay(dayIndex){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const day = program[dayIndex];</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; let count = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; day.blocks.forEach((b, exIdx)=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; for(let s=1; s&lt;=b.sets; s++){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const id = `${exerciseId(dayIndex,exIdx)}_set${s}`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if(state.checks[id]) count++;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return count;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function totalChecksWeek(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; let total = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; for(let i=0;i&lt;program.length;i++) total += totalChecksForDay(i);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return total;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; function checkedWeek(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; let done = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; for(let i=0;i&lt;program.length;i++) done += checkedForDay(i);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return done;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function sessionsDoneWeek(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; // count only days that have blocks (muscu days) where all sets completed</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; let c = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; program.forEach((d, i)=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; if(d.blocks.length){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const t = totalChecksForDay(i);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const done = checkedForDay(i);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if(t &amp;&amp; done === t) c++;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return c;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // TIMER (BIP d&eacute;but/fin)</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; let timerInterval = null;</span></p><p class="c1"><span class="c0">&nbsp; let remaining = 0;</span></p><p class="c1"><span class="c0">&nbsp; let running = false;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; const $timerText = document.getElementById(&quot;timerText&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $timerHint = document.getElementById(&quot;timerHint&quot;);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function secondsTarget(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(state.settings.timerMode === &quot;custom&quot;) return Number(state.settings.customSeconds) || 60;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return Number(state.settings.restSeconds) || 75;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function fmtMMSS(sec){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const s = Math.max(0, Math.floor(sec));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const m = Math.floor(s / 60);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const r = s % 60;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; return `${String(m).padStart(2,&#39;0&#39;)}:${String(r).padStart(2,&#39;0&#39;)}`;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function updateTimerUI(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $timerText.textContent = fmtMMSS(remaining || secondsTarget());</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const modeLabel = state.settings.timerMode === &quot;custom&quot; ? &quot;perso&quot; : &quot;repos&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const status = running ? &quot;&#9203; en cours&quot; : &quot;&#9208; pr&ecirc;t&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $timerHint.textContent = `Timer ${status} &bull; mode: ${modeLabel}`;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // Simple bip via Web Audio (fonctionne sur mobile si interaction user avant)</span></p><p class="c1"><span class="c0">&nbsp; function beep(frequency=880, durationMs=120, volume=0.12){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(!state.settings.sound) return;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; try{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const AudioCtx = window.AudioContext || window.webkitAudioContext;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const ctx = new AudioCtx();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const osc = ctx.createOscillator();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const gain = ctx.createGain();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; osc.type = &quot;sine&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; osc.frequency.value = frequency;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; gain.gain.value = volume;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; osc.connect(gain);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; gain.connect(ctx.destination);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; osc.start();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; setTimeout(()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; osc.stop();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ctx.close();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }, durationMs);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }catch(e){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; // no-op</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function buzz(pattern=150){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(state.settings.vibrate &amp;&amp; navigator.vibrate) navigator.vibrate(pattern);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function startTimer(targetSec=null){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const target = targetSec ?? secondsTarget();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; remaining = target;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; running = true;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; beep(740, 100); // bip d&eacute;but</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; buzz(40);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; clearInterval(timerInterval);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; timerInterval = setInterval(()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; remaining -= 1;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; if(remaining &lt;= 0){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; remaining = 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; stopTimer(true);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }, 1000);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function stopTimer(finished=false){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; clearInterval(timerInterval);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; timerInterval = null;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; running = false;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(finished){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; beep(988, 120); // bip fin</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; setTimeout(()=&gt;beep(988, 120), 140); // double bip fin</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; buzz([80,60,80]);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function pauseTimer(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(!running) return;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; clearInterval(timerInterval);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; timerInterval = null;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; running = false;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function resetTimer(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; stopTimer(false);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; remaining = secondsTarget();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // RENDER KPI + MEASURES</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; const $kpi = document.getElementById(&quot;kpi&quot;);</span></p><p class="c1"><span class="c0">&nbsp; const $weekBar = document.getElementById(&quot;weekBar&quot;);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function renderKpi(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const totalW = totalChecksWeek();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const doneW = checkedWeek();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const pct = totalW ? Math.round((doneW/totalW)*100) : 100;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $weekBar.style.width = `${pct}%`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const sessions = sessionsDoneWeek();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const best = 4; // objectif max (3 + 1 optionnelle)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const sessionsLabel = `${sessions}/${best} s&eacute;ances compl&egrave;tes`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $kpi.innerHTML = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill ${sessions&gt;=3?&#39;good&#39;:&#39;warn&#39;}&quot;&gt;&#128293; ${sessionsLabel}&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#9989; ${doneW}/${totalW} s&eacute;ries&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill ${pct&gt;=70?&#39;good&#39;:(pct&gt;=40?&#39;warn&#39;:&#39;bad&#39;)}&quot;&gt;&#128200; ${pct}% semaine&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#9201;&#65039; repos: ${state.settings.timerMode===&#39;custom&#39; ? (state.settings.customSeconds+&#39;s&#39;) : (state.settings.restSeconds+&#39;s&#39;)}&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; `;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; const $measureTableWrap = document.getElementById(&quot;measureTableWrap&quot;);</span></p><p class="c1"><span class="c0">&nbsp; function renderMeasures(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(!state.measures?.length){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; $measureTableWrap.innerHTML = `&lt;div class=&quot;small&quot; style=&quot;margin-top:10px;color:var(--muted)&quot;&gt;Aucune mesure enregistr&eacute;e pour cette semaine.&lt;/div&gt;`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const rows = [...state.measures].sort((a,b)=&gt;b.ts-a.ts).map(m=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const d = new Date(m.ts);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const dateStr = d.toLocaleString(&quot;fr-FR&quot;,{day:&quot;2-digit&quot;,month:&quot;2-digit&quot;,hour:&quot;2-digit&quot;,minute:&quot;2-digit&quot;});</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const w = (m.weight ?? &quot;&quot;) === &quot;&quot; ? &quot;-&quot; : `${m.weight} kg`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const waist = (m.waist ?? &quot;&quot;) === &quot;&quot; ? &quot;-&quot; : `${m.waist} cm`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const note = (m.note ?? &quot;&quot;).replaceAll(&quot;&lt;&quot;,&quot;&amp;lt;&quot;).replaceAll(&quot;&gt;&quot;,&quot;&amp;gt;&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; return `&lt;tr&gt;&lt;td&gt;${dateStr}&lt;/td&gt;&lt;td&gt;${w}&lt;/td&gt;&lt;td&gt;${waist}&lt;/td&gt;&lt;td&gt;${note||&quot;-&quot;}&lt;/td&gt;&lt;/tr&gt;`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }).join(&quot;&quot;);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $measureTableWrap.innerHTML = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;table&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Poids&lt;/th&gt;&lt;th&gt;Taille&lt;/th&gt;&lt;th&gt;Note&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;tbody&gt;${rows}&lt;/tbody&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/table&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; `;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // RENDER CARDS</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; function renderProgressBars(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; document.querySelectorAll(&quot;.bar[data-day]&quot;).forEach(bar=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const dayIndex = Number(bar.dataset.day);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const total = totalChecksForDay(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const done = checkedForDay(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const pct = total ? Math.round((done/total)*100) : 100;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; bar.style.width = `${pct}%`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; function render(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $cards.innerHTML = &quot;&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const level = state.settings.level;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; program.forEach((day, dayIndex)=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const card = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; card.className = &quot;card&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const head = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; head.className = &quot;card-h&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const h2 = document.createElement(&quot;h2&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const d = dayDateFromIndex(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; h2.textContent = `${day.day} &mdash; ${day.tag}`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const meta = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; meta.className = &quot;meta&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const pillDate = document.createElement(&quot;span&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillDate.className = &quot;pill&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillDate.textContent = `&#128467;&#65039; ${fmtDate(d)}`;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const pillToday = document.createElement(&quot;span&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillToday.className = &quot;pill good&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillToday.textContent = &quot;&#11088; Aujourd&rsquo;hui&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const total = totalChecksForDay(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const done = checkedForDay(dayIndex);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const pillCount = document.createElement(&quot;span&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillCount.className = &quot;pill&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; pillCount.textContent = total ? `&#128204; ${done}/${total} s&eacute;ries` : &quot;&#129496; R&eacute;cup / sport&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; meta.appendChild(pillDate);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; if(isToday(dayIndex)) meta.appendChild(pillToday);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; meta.appendChild(pillCount);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; head.appendChild(h2);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; head.appendChild(meta);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const content = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; content.className = &quot;content&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const note = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note.className = &quot;small&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note.textContent = day.note;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; content.appendChild(note);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; // Progress bar day</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const progWrap = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; progWrap.style.marginTop = &quot;10px&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const prog = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; prog.className = &quot;progress&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const bar = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; bar.className = &quot;bar&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; bar.dataset.day = dayIndex;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; prog.appendChild(bar);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; progWrap.appendChild(prog);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; content.appendChild(progWrap);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; if(day.blocks.length === 0){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const empty = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; empty.className = &quot;ex&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; empty.innerHTML = `&lt;div class=&quot;ex-top&quot;&gt;&lt;div&gt;&lt;div class=&quot;ex-name&quot;&gt;&#9989; Rien &agrave; cocher ici&lt;/div&gt;&lt;div class=&quot;ex-desc&quot;&gt;Profite de ton foot / r&eacute;cup. Petite marche = bonus.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; content.appendChild(empty);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; day.blocks.forEach((ex, exIndex)=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const exBox = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; exBox.className = &quot;ex&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const top = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top.className = &quot;ex-top&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const left = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left.style.minWidth = &quot;260px&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // weight input</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const wKey = `w_${exerciseId(dayIndex, exIndex)}`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const savedW = state.weights[wKey] ?? &quot;&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const weightHtml = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;hint&quot; style=&quot;display:block; margin-top:10px&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Poids utilis&eacute; (kg)</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input class=&quot;input mono&quot; style=&quot;min-width:110px&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.5&quot; value=&quot;${String(savedW).replaceAll(&#39;&quot;&#39;,&#39;&amp;quot;&#39;)}&quot; /&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left.innerHTML = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;ex-name&quot;&gt;${ex.name}&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;ex-desc&quot;&gt;${ex.desc}&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row small&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#129504; ${ex.sets} s&eacute;ries&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#128257; ${ex.reps[level]}&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#9201;&#65039; repos ${state.settings.restSeconds}s&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ${weightHtml}</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const weightInput = left.querySelector(&quot;input&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; weightInput.addEventListener(&quot;input&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; state.weights[wKey] = weightInput.value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const right = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right.innerHTML = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#127947;&#65039; R&egrave;gle : 2 reps en r&eacute;serve&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#9989; Technique propre&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&#128242; Coche une s&eacute;rie = timer (si auto activ&eacute;)&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top.appendChild(left);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top.appendChild(right);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const row = document.createElement(&quot;div&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; row.className = &quot;row&quot;;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for(let s=1; s&lt;=ex.sets; s++){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const setId = `${exerciseId(dayIndex,exIndex)}_set${s}`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const label = document.createElement(&quot;label&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label.className = &quot;check&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label.innerHTML = `</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;checkbox&quot; ${state.checks[setId] ? &quot;checked&quot;:&quot;&quot;}/&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;S&eacute;rie ${s}&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const cb = label.querySelector(&quot;input&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cb.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; state.checks[setId] = cb.checked;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Auto &quot;jour fait&quot; si tout est coch&eacute;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const totalDay = totalChecksForDay(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const doneDay = checkedForDay(dayIndex);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; state.doneDays[dayIndex] = (totalDay &amp;&amp; doneDay === totalDay);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; save();</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Auto timer si on vient de cocher</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(cb.checked &amp;&amp; state.settings.autoTimer){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; startTimer(secondsTarget());</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; row.appendChild(label);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Quick timer button per exercise</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const quick = document.createElement(&quot;button&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quick.className = &quot;btn-blue&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quick.textContent = &quot;&#9201;&#65039; Repos maintenant&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quick.addEventListener(&quot;click&quot;, ()=&gt;startTimer(secondsTarget()));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; row.appendChild(quick);</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const iframe = document.createElement(&quot;iframe&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.className = &quot;video&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.src = ex.video;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.title = `Vid&eacute;o : ${ex.name}`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.loading = &quot;lazy&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.allow = &quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.referrerPolicy = &quot;strict-origin-when-cross-origin&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iframe.allowFullscreen = true;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; exBox.appendChild(top);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; exBox.appendChild(row);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; exBox.appendChild(iframe);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content.appendChild(exBox);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; card.appendChild(head);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; card.appendChild(content);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; $cards.appendChild(card);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderProgressBars();</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // BUTTONS / UI EVENTS</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;resetWeek&quot;).addEventListener(&quot;click&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(confirm(&quot;R&eacute;initialiser tous les checks (et poids/mesures) de la semaine ?&quot;)){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const keepSettings = structuredClone(state.settings);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; Object.assign(state, structuredClone(stateDefault));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; state.settings = keepSettings; // on garde tes pr&eacute;f&eacute;rences timer</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; render();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; resetTimer();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;markToday&quot;).addEventListener(&quot;click&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const today = new Date();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const dayIndex = ((today.getDay()+6)%7); // Monday=0</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const day = program[dayIndex];</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(!day.blocks.length){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; alert(&quot;Aujourd&rsquo;hui : foot / repos. Rien &agrave; cocher &#9989;&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; day.blocks.forEach((ex, exIndex)=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; for(let s=1; s&lt;=ex.sets; s++){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const setId = `${exerciseId(dayIndex,exIndex)}_set${s}`;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.checks[setId] = true;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.doneDays[dayIndex] = true;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; render();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // TIMER buttons</span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;timerStart&quot;).addEventListener(&quot;click&quot;, ()=&gt;startTimer(secondsTarget()));</span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;timerPause&quot;).addEventListener(&quot;click&quot;, ()=&gt;pauseTimer());</span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;timerReset&quot;).addEventListener(&quot;click&quot;, ()=&gt;{ resetTimer(); });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // Measures</span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;addMeasure&quot;).addEventListener(&quot;click&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const w = document.getElementById(&quot;mWeight&quot;).value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const waist = document.getElementById(&quot;mWaist&quot;).value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const note = document.getElementById(&quot;mNote&quot;).value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(w===&quot;&quot; &amp;&amp; waist===&quot;&quot; &amp;&amp; (note||&quot;&quot;).trim()===&quot;&quot;){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; alert(&quot;Ajoute au moins un champ (poids, taille ou note).&quot;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.measures.push({</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; ts: Date.now(),</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; weight: w===&quot;&quot; ? &quot;&quot; : Number(w),</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; waist: waist===&quot;&quot; ? &quot;&quot; : Number(waist),</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; note: (note||&quot;&quot;).trim()</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; document.getElementById(&quot;mNote&quot;).value = &quot;&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; document.getElementById(&quot;clearMeasures&quot;).addEventListener(&quot;click&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if(confirm(&quot;Effacer l&rsquo;historique des mesures pour cette semaine ?&quot;)){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; state.measures = [];</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // Settings bindings</span></p><p class="c1"><span class="c0">&nbsp; function applySettingsToUI(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $level.value = state.settings.level || &quot;standard&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $rest.value = String(state.settings.restSeconds || 75);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $timerMode.value = state.settings.timerMode || &quot;rest&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $customSeconds.value = Number(state.settings.customSeconds || 60);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $customWrap.style.display = ($timerMode.value === &quot;custom&quot;) ? &quot;block&quot; : &quot;none&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $autoTimer.checked = !!state.settings.autoTimer;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $vibrate.checked = !!state.settings.vibrate;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $sound.checked = !!state.settings.sound;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $level.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.level = $level.value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; render();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $rest.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.restSeconds = Number($rest.value);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; resetTimer();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderProgressBars();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $timerMode.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.timerMode = $timerMode.value;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; $customWrap.style.display = ($timerMode.value === &quot;custom&quot;) ? &quot;block&quot; : &quot;none&quot;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; resetTimer();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $customSeconds.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.customSeconds = Number($customSeconds.value || 60);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; resetTimer();</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $autoTimer.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.autoTimer = $autoTimer.checked;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $vibrate.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.vibrate = $vibrate.checked;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; $sound.addEventListener(&quot;change&quot;, ()=&gt;{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings.sound = $sound.checked;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; save();</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // INIT</span></p><p class="c1"><span class="c0">&nbsp; // -----------------------------</span></p><p class="c1"><span class="c0">&nbsp; // If old state missing new keys, merge softly</span></p><p class="c1"><span class="c0">&nbsp; (function migrate(){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.weights = state.weights || {};</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.settings = Object.assign(structuredClone(stateDefault.settings), state.settings || {});</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; state.measures = state.measures || [];</span></p><p class="c1"><span class="c0">&nbsp; })();</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; applySettingsToUI();</span></p><p class="c1"><span class="c0">&nbsp; updateTimerUI();</span></p><p class="c1"><span class="c0">&nbsp; renderKpi();</span></p><p class="c1"><span class="c0">&nbsp; renderMeasures();</span></p><p class="c1"><span class="c0">&nbsp; render();</span></p><p class="c1"><span class="c0">&nbsp; resetTimer();</span></p><p class="c1"><span class="c0">&lt;/script&gt;</span></p><p class="c1"><span class="c0">&lt;/body&gt;</span></p><p class="c1"><span class="c0">&lt;/html&gt;</span></p><p class="c1 c2"><span class="c0"></span></p></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programme Jérémy — Haut du corps + Abdos</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111826; --muted:#94a3b8; --text:#e5e7eb;
+      --accent:#22c55e; --accent2:#3b82f6; --danger:#ef4444; --warn:#f59e0b;
+      --border:#1f2937;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:var(--sans);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.18), transparent),
+        radial-gradient(1000px 600px at 100% 0%, rgba(34,197,94,.18), transparent),
+        var(--bg);
+      color:var(--text);
+    }
+    header{ padding:22px 16px 10px; max-width:1100px; margin:0 auto; }
+    .title{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .badge{
+      font-size:12px; padding:6px 10px; border:1px solid var(--border); border-radius:999px;
+      color:var(--muted); background: rgba(17,24,38,.6);
+    }
+    h1{ margin:0; font-size:22px; letter-spacing:.2px; }
+    .sub{ margin:10px 0 0; color:var(--muted); line-height:1.45; font-size:14px; }
+
+    .wrap{ max-width:1100px; margin:0 auto; padding:12px 16px 28px; }
+
+    .toolbar{
+      display:grid; gap:10px;
+      background: rgba(17,24,38,.6); border:1px solid var(--border);
+      padding:12px; border-radius:var(--radius); box-shadow: var(--shadow);
+    }
+    .toolbarRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .toolbarRow.space{ justify-content:space-between; }
+    .group{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }
+
+    button{
+      border:1px solid var(--border);
+      background: rgba(17,24,38,.85);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    button:hover{border-color: rgba(59,130,246,.6)}
+    .btn-accent{ background: rgba(34,197,94,.15); border-color: rgba(34,197,94,.35); }
+    .btn-danger{ background: rgba(239,68,68,.12); border-color: rgba(239,68,68,.35); }
+    .btn-warn{ background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.35); }
+    .btn-blue{ background: rgba(59,130,246,.14); border-color: rgba(59,130,246,.35); }
+
+    .select, .input{
+      border:1px solid var(--border);
+      background: rgba(17,24,38,.85);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:700;
+      min-width: 170px;
+    }
+    .input{ min-width: 120px; }
+    .hint{ color:var(--muted); font-size:12px; }
+    .mono{ font-family: var(--mono); }
+
+    .grid{
+      display:grid; gap:12px; margin-top:12px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 12;
+      background: rgba(17,24,38,.6);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-h{
+      padding:14px 14px 10px;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      border-bottom:1px solid rgba(31,41,55,.7);
+    }
+    .card-h h2{ margin:0; font-size:16px; }
+    .meta{ color:var(--muted); font-size:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .pill{
+      padding:4px 8px; border-radius:999px; border:1px solid var(--border);
+      background: rgba(11,15,20,.35); color:var(--muted);
+    }
+    .pill.good{ border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.10); color: #b7f7c8; }
+    .pill.warn{ border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.10); color: #ffe3a3; }
+    .pill.bad{ border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.10); color: #ffb4b4; }
+
+    .content{ padding:12px 14px 14px; }
+    .ex{
+      border:1px solid rgba(31,41,55,.7);
+      border-radius:14px;
+      padding:12px;
+      background: rgba(11,15,20,.35);
+      margin-top:10px;
+    }
+    .ex-top{
+      display:flex; gap:10px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;
+    }
+    .ex-name{ font-weight:900; }
+    .ex-desc{ color:var(--muted); font-size:12px; margin-top:6px; line-height:1.35; }
+    .row{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px;
+    }
+    .check{
+      display:flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:12px; border:1px solid rgba(31,41,55,.7);
+      background: rgba(17,24,38,.55);
+    }
+    input[type="checkbox"]{ width:18px; height:18px; accent-color: var(--accent); }
+    .small{ font-size:12px; color:var(--muted); }
+
+    .video{
+      width:100%;
+      aspect-ratio: 16/9;
+      border:0;
+      border-radius: 12px;
+      margin-top:10px;
+      background:#000;
+    }
+
+    .progress{
+      height:10px; border-radius:999px; background: rgba(148,163,184,.15); overflow:hidden;
+      border:1px solid rgba(31,41,55,.7);
+    }
+    .bar{
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg, rgba(34,197,94,.9), rgba(59,130,246,.9));
+    }
+
+    .panel{
+      border:1px solid rgba(31,41,55,.7);
+      border-radius:14px;
+      background: rgba(11,15,20,.35);
+      padding:12px;
+    }
+
+    .timerBox{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+    }
+    .timerLeft{ display:flex; flex-wrap:wrap; gap:10px; align-items:end; }
+    .timerDisplay{
+      min-width: 160px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(31,41,55,.7);
+      background: rgba(17,24,38,.55);
+    }
+    .timerBig{ font-size:20px; font-weight:900; letter-spacing: .5px; }
+    .timerSmall{ font-size:12px; color:var(--muted); margin-top:2px; }
+    .toggle{
+      display:flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:12px; border:1px solid rgba(31,41,55,.7);
+      background: rgba(17,24,38,.55);
+      font-weight:800;
+      color:var(--muted);
+    }
+    .toggle input{ width:18px; height:18px; accent-color: var(--accent2); }
+    details{ margin-top:12px; }
+    summary{ cursor:pointer; font-weight:900; color: var(--text); }
+    table{
+      width:100%;
+      border-collapse: collapse;
+      margin-top:10px;
+      font-size: 13px;
+    }
+    th, td{
+      border-bottom: 1px solid rgba(31,41,55,.7);
+      padding: 8px 6px;
+      text-align:left;
+      color: var(--muted);
+    }
+    th{ color: var(--text); }
+    .kpi{
+      display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+    }
+    @media (min-width: 900px){
+      .card{ grid-column: span 6; }
+      .toolbar{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>💪 Programme Jérémy — Haut du corps + Abdos</h1>
+    <span class="badge" id="weekLabel"></span>
+    <span class="badge">⚽ Foot : mardi & vendredi</span>
+    <span class="badge">🎯 Objectif : épaules / pecs / bras / abdos + -poignées d’amour</span>
+  </div>
+  <p class="sub">
+    3 séances muscu + 1 optionnelle • Haltères 1–10 kg • Suivi + poids + mesures • Sauvegarde automatique.
+  </p>
+</header>
+
+<div class="wrap">
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+
+    <div class="toolbarRow space">
+      <div class="group">
+        <label class="hint">
+          Intensité
+          <select class="select" id="level">
+            <option value="debutant">Débutant (reps bas + contrôle)</option>
+            <option value="standard" selected>Standard (bon rythme)</option>
+            <option value="tonique">Tonique (reps haut + peu de repos)</option>
+          </select>
+        </label>
+
+        <label class="hint">
+          Repos (sec)
+          <select class="select" id="rest">
+            <option value="60">60</option>
+            <option value="75" selected>75</option>
+            <option value="90">90</option>
+          </select>
+        </label>
+
+        <label class="hint">
+          Objectif timer
+          <select class="select" id="timerMode">
+            <option value="rest" selected>Repos entre séries</option>
+            <option value="custom">Durée personnalisée</option>
+          </select>
+        </label>
+
+        <label class="hint" id="customWrap" style="display:none">
+          Durée (sec)
+          <input class="input" id="customSeconds" type="number" min="10" step="5" value="60" />
+        </label>
+      </div>
+
+      <div class="group">
+        <button class="btn-accent" id="markToday">✅ Marquer la séance du jour</button>
+        <button class="btn-danger" id="resetWeek">🧹 Réinitialiser la semaine</button>
+      </div>
+    </div>
+
+    <!-- TIMER PANEL -->
+    <div class="panel">
+      <div class="timerBox">
+        <div class="timerLeft">
+          <div class="timerDisplay">
+            <div class="timerBig mono" id="timerText">01:15</div>
+            <div class="timerSmall" id="timerHint">Timer prêt • mode: repos</div>
+          </div>
+
+          <div class="group">
+            <button class="btn-blue" id="timerStart">▶️ Start</button>
+            <button class="btn-warn" id="timerPause">⏸ Pause</button>
+            <button id="timerReset">⟲ Reset</button>
+          </div>
+
+          <label class="toggle">
+            <input type="checkbox" id="autoTimer" />
+            Auto-timer quand je coche une série
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" id="vibrate" />
+            Vibration (si dispo)
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" id="sound" checked />
+            BIP début/fin
+          </label>
+        </div>
+
+        <div class="kpi" id="kpi"></div>
+      </div>
+
+      <div style="margin-top:10px">
+        <div class="progress"><div class="bar" id="weekBar" style="width:0%"></div></div>
+        <div class="small" style="margin-top:6px">
+          📌 Astuce : vise <b>2 reps en réserve</b>. Forme propre > charge.
+        </div>
+      </div>
+
+      <details>
+        <summary>📏 Mes mesures (poids / tour de taille / historique)</summary>
+        <div class="row" style="margin-top:10px">
+          <label class="hint">Poids (kg)
+            <input class="input" id="mWeight" type="number" min="30" max="200" step="0.1" placeholder="85.0" />
+          </label>
+          <label class="hint">Tour de taille (cm)
+            <input class="input" id="mWaist" type="number" min="40" max="160" step="0.5" placeholder="ex: 92" />
+          </label>
+          <label class="hint" style="flex:1; min-width:220px">Note
+            <input class="input" id="mNote" type="text" placeholder="ex: semaine chargée, bon sommeil…" style="width:100%; min-width:220px"/>
+          </label>
+          <button class="btn-accent" id="addMeasure">➕ Ajouter</button>
+          <button class="btn-danger" id="clearMeasures">🗑️ Effacer historique</button>
+        </div>
+
+        <div id="measureTableWrap"></div>
+      </details>
+    </div>
+
+  </div>
+
+  <!-- CARDS -->
+  <div class="grid" id="cards"></div>
+
+  <div class="panel" style="margin-top:12px">
+    ⚠️ <b>Note santé</b> : douleur inhabituelle (épaule / bas du dos) ⇒ stoppe l’exercice et remplace-le.
+    <br/>🔥 <b>Abdos & poignées d’amour</b> : muscu + gainage + léger déficit calorique + régularité (8–12 semaines).
+  </div>
+</div>
+
+<script>
+  // -----------------------------
+  // PROGRAMME + VIDÉOS
+  // -----------------------------
+  const program = [
+    {
+      day: "Lundi",
+      tag: "Pecs • Épaules • Abdos",
+      note: "Séance principale haut du corps (volume pecs/épaules).",
+      blocks: [
+        { name:"Pompes", sets:3, reps:{debutant:"8–10",standard:"10–15",tonique:"12–18"}, desc:"Gainage serré, poitrine vers le sol, remonte en bloc. Variante genoux si besoin.", video:"https://www.youtube.com/embed/IODxDxX7oi4" },
+        { name:"Développé couché au sol (haltères)", sets:3, reps:{debutant:"8–10",standard:"10–12",tonique:"12–15"}, desc:"Coudes ~45°, contrôle en bas, pousse fort. Idéal sans banc.", video:"https://www.youtube.com/embed/uUGDRwge4F8" },
+        { name:"Développé épaules (haltères)", sets:3, reps:{debutant:"8–10",standard:"10–12",tonique:"12–15"}, desc:"Buste gainé, presse au-dessus de la tête sans cambrer.", video:"https://www.youtube.com/embed/qEwKCR5JCog" },
+        { name:"Élévations latérales", sets:3, reps:{debutant:"12",standard:"12–15",tonique:"15–20"}, desc:"Monte jusqu’à l’épaule, lent à la descente. Charge légère (1–6kg souvent).", video:"https://www.youtube.com/embed/3VcKaXpzqRo" },
+        { name:"Gainage (planche)", sets:3, reps:{debutant:"30–40 sec",standard:"40–60 sec",tonique:"60–75 sec"}, desc:"Fesses ni trop haut ni trop bas. Respire, nombril rentré.", video:"https://www.youtube.com/embed/pSHjTRCQxIw" },
+        { name:"Gainage latéral (spécial “poignées d’amour”)", sets:3, reps:{debutant:"20–30 sec / côté",standard:"30–45 sec / côté",tonique:"45–60 sec / côté"}, desc:"Hanche haute, épaule au-dessus du coude, corps aligné.", video:"https://www.youtube.com/embed/XeN4pEZZJNI" }
+      ]
+    },
+    { day:"Mardi", tag:"⚽ Foot", note:"Match / entraînement. Hydratation + dîner léger.", blocks:[] },
+    {
+      day: "Mercredi",
+      tag: "Dos • Bras • Abdos",
+      note: "Posture + dos (clé pour “haut du corps qui se tient”).",
+      blocks: [
+        { name:"Rowing unilatéral (haltère)", sets:3, reps:{debutant:"10 / côté",standard:"10–12 / côté",tonique:"12–15 / côté"}, desc:"Tire le coude vers la hanche, omoplate se serre, dos plat.", video:"https://www.youtube.com/embed/pYcpY20QaE8" },
+        { name:"Rowing buste penché (2 haltères)", sets:3, reps:{debutant:"10",standard:"10–12",tonique:"12–15"}, desc:"Charnière de hanches, dos neutre, tire vers le bas des côtes.", video:"https://www.youtube.com/embed/yJ8NTl5RaTk" },
+        { name:"Curl biceps", sets:3, reps:{debutant:"10–12",standard:"12",tonique:"12–15"}, desc:"Coudes collés, monte sans balancer. Contrôle à la descente.", video:"https://www.youtube.com/embed/ykJmrZ5v0Oo" },
+        { name:"Extension triceps au-dessus de la tête (1 haltère)", sets:3, reps:{debutant:"10–12",standard:"12",tonique:"12–15"}, desc:"Coudes serrés, descends derrière la tête, remonte en contrôlant.", video:"https://www.youtube.com/embed/2-LAMcpzODU" },
+        { name:"Dead Bug (abdos profonds)", sets:3, reps:{debutant:"8 / côté",standard:"10 / côté",tonique:"12 / côté"}, desc:"Bas du dos collé au sol, mouvements lents, respiration contrôlée.", video:"https://www.youtube.com/embed/bxn9FBrt4-A" },
+        { name:"Relevés de jambes au sol", sets:3, reps:{debutant:"8–10",standard:"10–12",tonique:"12–15"}, desc:"Ne cambre pas : mains sous les fesses si besoin. Descente lente.", video:"https://www.youtube.com/embed/Wp4BlxcFTkE" }
+      ]
+    },
+    {
+      day: "Jeudi",
+      tag: "Mix haut du corps + Gainage (plus léger)",
+      note: "Séance “qualité” : technique + pompe la posture sans te cramer avant le foot.",
+      blocks: [
+        { name:"Pompes serrées (triceps + pecs)", sets:3, reps:{debutant:"6–8",standard:"8–12",tonique:"12–15"}, desc:"Mains plus proches, coudes près du corps. Variante genoux ok.", video:"https://www.youtube.com/embed/0pkjOk0EiAk" },
+        { name:"Développé épaules (haltères)", sets:3, reps:{debutant:"8–10",standard:"10–12",tonique:"12–15"}, desc:"Buste gainé, pas de cambrure.", video:"https://www.youtube.com/embed/qEwKCR5JCog" },
+        { name:"Rowing unilatéral (haltère)", sets:3, reps:{debutant:"10 / côté",standard:"10–12 / côté",tonique:"12–15 / côté"}, desc:"Coude vers la hanche, omoplate active.", video:"https://www.youtube.com/embed/pYcpY20QaE8" },
+        { name:"Élévations latérales", sets:3, reps:{debutant:"12",standard:"12–15",tonique:"15–20"}, desc:"Focus largeur d’épaules. Lenteur > charge.", video:"https://www.youtube.com/embed/3VcKaXpzqRo" },
+        { name:"Mountain climbers (cardio + abdos)", sets:3, reps:{debutant:"20 sec",standard:"30 sec",tonique:"40 sec"}, desc:"Hanches stables, rythme régulier.", video:"https://www.youtube.com/embed/CQk4MHY2_Tc" },
+        { name:"Gainage latéral", sets:3, reps:{debutant:"20–30 sec / côté",standard:"30–45 sec / côté",tonique:"45–60 sec / côté"}, desc:"Alignement parfait. Hanche haute.", video:"https://www.youtube.com/embed/XeN4pEZZJNI" }
+      ]
+    },
+    { day:"Vendredi", tag:"⚽ Foot", note:"Match / entraînement. Étirements + sommeil.", blocks:[] },
+    {
+      day:"Samedi (optionnel)",
+      tag:"Abdos + finisher (15–20 min)",
+      note:"Courte séance pour accélérer la perte de gras (sans t’épuiser).",
+      blocks:[
+        { name:"Circuit x 3 tours (sans charge)", sets:3, reps:{debutant:"Rythme cool",standard:"Rythme régulier",tonique:"Rythme soutenu"}, desc:"1) Jumping jacks 45s • 2) Mountain climbers 30s • 3) Planche 45s • 4) Russian twists 20 reps • Repos 60s", video:"https://www.youtube.com/embed/nmwgirgXLYM" }
+      ]
+    },
+    { day:"Dimanche", tag:"Repos / marche", note:"Marche 30–60 min si possible (top pour la perte de gras).", blocks:[] }
+  ];
+
+  // -----------------------------
+  // DATE SEMAINE (LUNDI -> DIMANCHE)
+  // -----------------------------
+  function getMonday(d=new Date()){
+    const date = new Date(d);
+    const day = (date.getDay()+6)%7; // Monday=0
+    date.setHours(0,0,0,0);
+    date.setDate(date.getDate()-day);
+    return date;
+  }
+  const monday = getMonday();
+  const sunday = new Date(monday); sunday.setDate(sunday.getDate()+6);
+  const weekKey = `jeremy_week_${monday.toISOString().slice(0,10)}`;
+
+  // -----------------------------
+  // STATE + STORAGE
+  // -----------------------------
+  const stateDefault = {
+    checks:{},           // per set checkbox
+    doneDays:{},         // dayIndex => true/false
+    weights:{},          // per exercise weight used
+    settings:{           // timer + toggles
+      autoTimer:true,
+      vibrate:false,
+      sound:true,
+      restSeconds:75,
+      timerMode:"rest",
+      customSeconds:60,
+      level:"standard"
+    },
+    measures:[]          // array of {ts, weight, waist, note}
+  };
+
+  const state = JSON.parse(localStorage.getItem(weekKey) || "null") || structuredClone(stateDefault);
+
+  function save(){
+    localStorage.setItem(weekKey, JSON.stringify(state));
+    renderProgressBars();
+    renderKpi();
+    renderMeasures();
+  }
+
+  // -----------------------------
+  // HELPERS
+  // -----------------------------
+  const $cards = document.getElementById("cards");
+  const $weekLabel = document.getElementById("weekLabel");
+  const $level = document.getElementById("level");
+  const $rest = document.getElementById("rest");
+  const $timerMode = document.getElementById("timerMode");
+  const $customWrap = document.getElementById("customWrap");
+  const $customSeconds = document.getElementById("customSeconds");
+  const $autoTimer = document.getElementById("autoTimer");
+  const $vibrate = document.getElementById("vibrate");
+  const $sound = document.getElementById("sound");
+
+  function fmtDate(d){
+    return d.toLocaleDateString("fr-FR",{weekday:"short", day:"2-digit", month:"2-digit"});
+  }
+  $weekLabel.textContent = `📅 ${fmtDate(monday)} → ${fmtDate(sunday)} (sauvegarde auto)`;
+
+  function dayDateFromIndex(dayIndex){
+    const d = new Date(monday);
+    d.setDate(d.getDate()+dayIndex);
+    return d;
+  }
+  function isToday(dayIndex){
+    const d = dayDateFromIndex(dayIndex);
+    const now = new Date();
+    return d.toDateString() === now.toDateString();
+  }
+
+  function exerciseId(dayIndex, exIndex){
+    return `${dayIndex}_${exIndex}`;
+  }
+
+  function totalChecksForDay(dayIndex){
+    const day = program[dayIndex];
+    let total = 0;
+    day.blocks.forEach(b => total += b.sets);
+    return total;
+  }
+
+  function checkedForDay(dayIndex){
+    const day = program[dayIndex];
+    let count = 0;
+    day.blocks.forEach((b, exIdx)=>{
+      for(let s=1; s<=b.sets; s++){
+        const id = `${exerciseId(dayIndex,exIdx)}_set${s}`;
+        if(state.checks[id]) count++;
+      }
+    });
+    return count;
+  }
+
+  function totalChecksWeek(){
+    let total = 0;
+    for(let i=0;i<program.length;i++) total += totalChecksForDay(i);
+    return total;
+  }
+  function checkedWeek(){
+    let done = 0;
+    for(let i=0;i<program.length;i++) done += checkedForDay(i);
+    return done;
+  }
+
+  function sessionsDoneWeek(){
+    // count only days that have blocks (muscu days) where all sets completed
+    let c = 0;
+    program.forEach((d, i)=>{
+      if(d.blocks.length){
+        const t = totalChecksForDay(i);
+        const done = checkedForDay(i);
+        if(t && done === t) c++;
+      }
+    });
+    return c;
+  }
+
+  // -----------------------------
+  // TIMER (BIP début/fin)
+  // -----------------------------
+  let timerInterval = null;
+  let remaining = 0;
+  let running = false;
+
+  const $timerText = document.getElementById("timerText");
+  const $timerHint = document.getElementById("timerHint");
+
+  function secondsTarget(){
+    if(state.settings.timerMode === "custom") return Number(state.settings.customSeconds) || 60;
+    return Number(state.settings.restSeconds) || 75;
+  }
+
+  function fmtMMSS(sec){
+    const s = Math.max(0, Math.floor(sec));
+    const m = Math.floor(s / 60);
+    const r = s % 60;
+    return `${String(m).padStart(2,'0')}:${String(r).padStart(2,'0')}`;
+  }
+
+  function updateTimerUI(){
+    $timerText.textContent = fmtMMSS(remaining || secondsTarget());
+    const modeLabel = state.settings.timerMode === "custom" ? "perso" : "repos";
+    const status = running ? "⏳ en cours" : "⏸ prêt";
+    $timerHint.textContent = `Timer ${status} • mode: ${modeLabel}`;
+  }
+
+  // Simple bip via Web Audio (fonctionne sur mobile si interaction user avant)
+  function beep(frequency=880, durationMs=120, volume=0.12){
+    if(!state.settings.sound) return;
+    try{
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const ctx = new AudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = frequency;
+      gain.gain.value = volume;
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start();
+      setTimeout(()=>{
+        osc.stop();
+        ctx.close();
+      }, durationMs);
+    }catch(e){
+      // no-op
+    }
+  }
+
+  function buzz(pattern=150){
+    if(state.settings.vibrate && navigator.vibrate) navigator.vibrate(pattern);
+  }
+
+  function startTimer(targetSec=null){
+    const target = targetSec ?? secondsTarget();
+    remaining = target;
+    running = true;
+
+    beep(740, 100); // bip début
+    buzz(40);
+
+    clearInterval(timerInterval);
+    timerInterval = setInterval(()=>{
+      remaining -= 1;
+      if(remaining <= 0){
+        remaining = 0;
+        stopTimer(true);
+      }
+      updateTimerUI();
+    }, 1000);
+    updateTimerUI();
+  }
+
+  function stopTimer(finished=false){
+    clearInterval(timerInterval);
+    timerInterval = null;
+    running = false;
+    if(finished){
+      beep(988, 120); // bip fin
+      setTimeout(()=>beep(988, 120), 140); // double bip fin
+      buzz([80,60,80]);
+    }
+    updateTimerUI();
+  }
+
+  function pauseTimer(){
+    if(!running) return;
+    clearInterval(timerInterval);
+    timerInterval = null;
+    running = false;
+    updateTimerUI();
+  }
+
+  function resetTimer(){
+    stopTimer(false);
+    remaining = secondsTarget();
+    updateTimerUI();
+  }
+
+  // -----------------------------
+  // RENDER KPI + MEASURES
+  // -----------------------------
+  const $kpi = document.getElementById("kpi");
+  const $weekBar = document.getElementById("weekBar");
+
+  function renderKpi(){
+    const totalW = totalChecksWeek();
+    const doneW = checkedWeek();
+    const pct = totalW ? Math.round((doneW/totalW)*100) : 100;
+    $weekBar.style.width = `${pct}%`;
+
+    const sessions = sessionsDoneWeek();
+    const best = 4; // objectif max (3 + 1 optionnelle)
+    const sessionsLabel = `${sessions}/${best} séances complètes`;
+
+    $kpi.innerHTML = `
+      <span class="pill ${sessions>=3?'good':'warn'}">🔥 ${sessionsLabel}</span>
+      <span class="pill">✅ ${doneW}/${totalW} séries</span>
+      <span class="pill ${pct>=70?'good':(pct>=40?'warn':'bad')}">📈 ${pct}% semaine</span>
+      <span class="pill">⏱️ repos: ${state.settings.timerMode==='custom' ? (state.settings.customSeconds+'s') : (state.settings.restSeconds+'s')}</span>
+    `;
+  }
+
+  const $measureTableWrap = document.getElementById("measureTableWrap");
+  function renderMeasures(){
+    if(!state.measures?.length){
+      $measureTableWrap.innerHTML = `<div class="small" style="margin-top:10px;color:var(--muted)">Aucune mesure enregistrée pour cette semaine.</div>`;
+      return;
+    }
+    const rows = [...state.measures].sort((a,b)=>b.ts-a.ts).map(m=>{
+      const d = new Date(m.ts);
+      const dateStr = d.toLocaleString("fr-FR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+      const w = (m.weight ?? "") === "" ? "-" : `${m.weight} kg`;
+      const waist = (m.waist ?? "") === "" ? "-" : `${m.waist} cm`;
+      const note = (m.note ?? "").replaceAll("<","&lt;").replaceAll(">","&gt;");
+      return `<tr><td>${dateStr}</td><td>${w}</td><td>${waist}</td><td>${note||"-"}</td></tr>`;
+    }).join("");
+
+    $measureTableWrap.innerHTML = `
+      <table>
+        <thead><tr><th>Date</th><th>Poids</th><th>Taille</th><th>Note</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  // -----------------------------
+  // RENDER CARDS
+  // -----------------------------
+  function renderProgressBars(){
+    document.querySelectorAll(".bar[data-day]").forEach(bar=>{
+      const dayIndex = Number(bar.dataset.day);
+      const total = totalChecksForDay(dayIndex);
+      const done = checkedForDay(dayIndex);
+      const pct = total ? Math.round((done/total)*100) : 100;
+      bar.style.width = `${pct}%`;
+    });
+    renderKpi();
+  }
+
+  function render(){
+    $cards.innerHTML = "";
+    const level = state.settings.level;
+
+    program.forEach((day, dayIndex)=>{
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const head = document.createElement("div");
+      head.className = "card-h";
+
+      const h2 = document.createElement("h2");
+      const d = dayDateFromIndex(dayIndex);
+      h2.textContent = `${day.day} — ${day.tag}`;
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+
+      const pillDate = document.createElement("span");
+      pillDate.className = "pill";
+      pillDate.textContent = `🗓️ ${fmtDate(d)}`;
+
+      const pillToday = document.createElement("span");
+      pillToday.className = "pill good";
+      pillToday.textContent = "⭐ Aujourd’hui";
+
+      const total = totalChecksForDay(dayIndex);
+      const done = checkedForDay(dayIndex);
+
+      const pillCount = document.createElement("span");
+      pillCount.className = "pill";
+      pillCount.textContent = total ? `📌 ${done}/${total} séries` : "🧘 Récup / sport";
+
+      meta.appendChild(pillDate);
+      if(isToday(dayIndex)) meta.appendChild(pillToday);
+      meta.appendChild(pillCount);
+
+      head.appendChild(h2);
+      head.appendChild(meta);
+
+      const content = document.createElement("div");
+      content.className = "content";
+
+      const note = document.createElement("div");
+      note.className = "small";
+      note.textContent = day.note;
+      content.appendChild(note);
+
+      // Progress bar day
+      const progWrap = document.createElement("div");
+      progWrap.style.marginTop = "10px";
+      const prog = document.createElement("div");
+      prog.className = "progress";
+      const bar = document.createElement("div");
+      bar.className = "bar";
+      bar.dataset.day = dayIndex;
+      prog.appendChild(bar);
+      progWrap.appendChild(prog);
+      content.appendChild(progWrap);
+
+      if(day.blocks.length === 0){
+        const empty = document.createElement("div");
+        empty.className = "ex";
+        empty.innerHTML = `<div class="ex-top"><div><div class="ex-name">✅ Rien à cocher ici</div><div class="ex-desc">Profite de ton foot / récup. Petite marche = bonus.</div></div></div>`;
+        content.appendChild(empty);
+      } else {
+        day.blocks.forEach((ex, exIndex)=>{
+          const exBox = document.createElement("div");
+          exBox.className = "ex";
+
+          const top = document.createElement("div");
+          top.className = "ex-top";
+
+          const left = document.createElement("div");
+          left.style.minWidth = "260px";
+
+          // weight input
+          const wKey = `w_${exerciseId(dayIndex, exIndex)}`;
+          const savedW = state.weights[wKey] ?? "";
+          const weightHtml = `
+            <label class="hint" style="display:block; margin-top:10px">
+              Poids utilisé (kg)
+              <input class="input mono" style="min-width:110px" type="number" min="0" step="0.5" value="${String(savedW).replaceAll('"','&quot;')}" />
+            </label>
+          `;
+
+          left.innerHTML = `
+            <div class="ex-name">${ex.name}</div>
+            <div class="ex-desc">${ex.desc}</div>
+            <div class="row small">
+              <span class="pill">🧠 ${ex.sets} séries</span>
+              <span class="pill">🔁 ${ex.reps[level]}</span>
+              <span class="pill">⏱️ repos ${state.settings.restSeconds}s</span>
+            </div>
+            ${weightHtml}
+          `;
+
+          const weightInput = left.querySelector("input");
+          weightInput.addEventListener("input", ()=>{
+            state.weights[wKey] = weightInput.value;
+            save();
+          });
+
+          const right = document.createElement("div");
+          right.innerHTML = `
+            <span class="pill">🏋️ Règle : 2 reps en réserve</span>
+            <span class="pill">✅ Technique propre</span>
+            <span class="pill">📲 Coche une série = timer (si auto activé)</span>
+          `;
+
+          top.appendChild(left);
+          top.appendChild(right);
+
+          const row = document.createElement("div");
+          row.className = "row";
+
+          for(let s=1; s<=ex.sets; s++){
+            const setId = `${exerciseId(dayIndex,exIndex)}_set${s}`;
+            const label = document.createElement("label");
+            label.className = "check";
+            label.innerHTML = `
+              <input type="checkbox" ${state.checks[setId] ? "checked":""}/>
+              <span>Série ${s}</span>
+            `;
+            const cb = label.querySelector("input");
+            cb.addEventListener("change", ()=>{
+              state.checks[setId] = cb.checked;
+
+              // Auto "jour fait" si tout est coché
+              const totalDay = totalChecksForDay(dayIndex);
+              const doneDay = checkedForDay(dayIndex);
+              state.doneDays[dayIndex] = (totalDay && doneDay === totalDay);
+
+              save();
+
+              // Auto timer si on vient de cocher
+              if(cb.checked && state.settings.autoTimer){
+                startTimer(secondsTarget());
+              }
+            });
+            row.appendChild(label);
+          }
+
+          // Quick timer button per exercise
+          const quick = document.createElement("button");
+          quick.className = "btn-blue";
+          quick.textContent = "⏱️ Repos maintenant";
+          quick.addEventListener("click", ()=>startTimer(secondsTarget()));
+          row.appendChild(quick);
+
+          const iframe = document.createElement("iframe");
+          iframe.className = "video";
+          iframe.src = ex.video;
+          iframe.title = `Vidéo : ${ex.name}`;
+          iframe.loading = "lazy";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
+          iframe.allowFullscreen = true;
+
+          exBox.appendChild(top);
+          exBox.appendChild(row);
+          exBox.appendChild(iframe);
+          content.appendChild(exBox);
+        });
+      }
+
+      card.appendChild(head);
+      card.appendChild(content);
+      $cards.appendChild(card);
+    });
+
+    renderProgressBars();
+  }
+
+  // -----------------------------
+  // BUTTONS / UI EVENTS
+  // -----------------------------
+  document.getElementById("resetWeek").addEventListener("click", ()=>{
+    if(confirm("Réinitialiser tous les checks (et poids/mesures) de la semaine ?")){
+      const keepSettings = structuredClone(state.settings);
+      Object.assign(state, structuredClone(stateDefault));
+      state.settings = keepSettings; // on garde tes préférences timer
+      save();
+      render();
+      resetTimer();
+    }
+  });
+
+  document.getElementById("markToday").addEventListener("click", ()=>{
+    const today = new Date();
+    const dayIndex = ((today.getDay()+6)%7); // Monday=0
+    const day = program[dayIndex];
+    if(!day.blocks.length){
+      alert("Aujourd’hui : foot / repos. Rien à cocher ✅");
+      return;
+    }
+    day.blocks.forEach((ex, exIndex)=>{
+      for(let s=1; s<=ex.sets; s++){
+        const setId = `${exerciseId(dayIndex,exIndex)}_set${s}`;
+        state.checks[setId] = true;
+      }
+    });
+    state.doneDays[dayIndex] = true;
+    save();
+    render();
+  });
+
+  // TIMER buttons
+  document.getElementById("timerStart").addEventListener("click", ()=>startTimer(secondsTarget()));
+  document.getElementById("timerPause").addEventListener("click", ()=>pauseTimer());
+  document.getElementById("timerReset").addEventListener("click", ()=>{ resetTimer(); });
+
+  // Measures
+  document.getElementById("addMeasure").addEventListener("click", ()=>{
+    const w = document.getElementById("mWeight").value;
+    const waist = document.getElementById("mWaist").value;
+    const note = document.getElementById("mNote").value;
+    if(w==="" && waist==="" && (note||"").trim()===""){
+      alert("Ajoute au moins un champ (poids, taille ou note).");
+      return;
+    }
+    state.measures.push({
+      ts: Date.now(),
+      weight: w==="" ? "" : Number(w),
+      waist: waist==="" ? "" : Number(waist),
+      note: (note||"").trim()
+    });
+    document.getElementById("mNote").value = "";
+    save();
+  });
+
+  document.getElementById("clearMeasures").addEventListener("click", ()=>{
+    if(confirm("Effacer l’historique des mesures pour cette semaine ?")){
+      state.measures = [];
+      save();
+    }
+  });
+
+  // Settings bindings
+  function applySettingsToUI(){
+    $level.value = state.settings.level || "standard";
+    $rest.value = String(state.settings.restSeconds || 75);
+    $timerMode.value = state.settings.timerMode || "rest";
+    $customSeconds.value = Number(state.settings.customSeconds || 60);
+    $customWrap.style.display = ($timerMode.value === "custom") ? "block" : "none";
+    $autoTimer.checked = !!state.settings.autoTimer;
+    $vibrate.checked = !!state.settings.vibrate;
+    $sound.checked = !!state.settings.sound;
+  }
+
+  $level.addEventListener("change", ()=>{
+    state.settings.level = $level.value;
+    save();
+    render();
+  });
+
+  $rest.addEventListener("change", ()=>{
+    state.settings.restSeconds = Number($rest.value);
+    save();
+    resetTimer();
+    renderKpi();
+    renderProgressBars();
+  });
+
+  $timerMode.addEventListener("change", ()=>{
+    state.settings.timerMode = $timerMode.value;
+    $customWrap.style.display = ($timerMode.value === "custom") ? "block" : "none";
+    save();
+    resetTimer();
+    renderKpi();
+  });
+
+  $customSeconds.addEventListener("change", ()=>{
+    state.settings.customSeconds = Number($customSeconds.value || 60);
+    save();
+    resetTimer();
+    renderKpi();
+  });
+
+  $autoTimer.addEventListener("change", ()=>{
+    state.settings.autoTimer = $autoTimer.checked;
+    save();
+  });
+
+  $vibrate.addEventListener("change", ()=>{
+    state.settings.vibrate = $vibrate.checked;
+    save();
+  });
+
+  $sound.addEventListener("change", ()=>{
+    state.settings.sound = $sound.checked;
+    save();
+  });
+
+  // -----------------------------
+  // INIT
+  // -----------------------------
+  // If old state missing new keys, merge softly
+  (function migrate(){
+    state.weights = state.weights || {};
+    state.settings = Object.assign(structuredClone(stateDefault.settings), state.settings || {});
+    state.measures = state.measures || [];
+  })();
+
+  applySettingsToUI();
+  updateTimerUI();
+  renderKpi();
+  renderMeasures();
+  render();
+  resetTimer();
+</script>
+</body>
+</html>
