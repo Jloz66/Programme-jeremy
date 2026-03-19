@@ -1,575 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Programme Jérémy — Coach évolutif</title>
-  <style>
-    :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --text:#111827;
-      --muted:#6b7280;
-      --border:#e5e7eb;
-      --shadow:0 10px 30px rgba(17,24,39,.08);
-      --radius:18px;
-      --green:#16a34a;
-      --blue:#2563eb;
-      --orange:#f59e0b;
-      --red:#ef4444;
-      --purple:#7c3aed;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--text)}
-    .container{max-width:980px;margin:0 auto;padding:18px 14px 30px}
-    header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-    h1,h2,h3,p{margin:0}
-    .brand p{margin-top:6px;color:var(--muted);font-size:13px;line-height:1.35}
-    .topActions,.pillRow,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .view{display:none}.view.active{display:block}
-    .btn,.select,.input{
-      border:1px solid var(--border);background:#fff;color:var(--text);padding:10px 12px;border-radius:12px;
-      box-shadow:0 2px 10px rgba(17,24,39,.04);font-weight:800
-    }
-    .btn{cursor:pointer}
-    .btnPrimary{background:rgba(22,163,74,.08);border-color:rgba(22,163,74,.25)}
-    .btnBlue{background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.25)}
-    .btnDanger{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.25)}
-    .btnWarn{background:rgba(245,158,11,.10);border-color:rgba(245,158,11,.25)}
-    .grid,.kpiGrid,.daysGrid,.twoCol{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    .card,.exercise,.timer,.emptyState{
-      grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)
-    }
-    .cardHeader{padding:14px 14px 10px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-    .cardHeader h2{font-size:15px}
-    .cardBody,.exercise,.timer,.emptyState{padding:14px}
-    .pill{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#fff;display:inline-flex;gap:6px;align-items:center}
-    .pill.good{border-color:rgba(22,163,74,.25);background:rgba(22,163,74,.08);color:#166534}
-    .pill.blue{border-color:rgba(37,99,235,.25);background:rgba(37,99,235,.08);color:#1e40af}
-    .pill.warn{border-color:rgba(245,158,11,.25);background:rgba(245,158,11,.10);color:#92400e}
-    .pill.purple{border-color:rgba(124,58,237,.20);background:rgba(124,58,237,.08);color:#6d28d9}
-    .muted{color:var(--muted);font-size:13px;line-height:1.35}
-    .kpi{grid-column:span 12;border:1px solid var(--border);border-radius:16px;padding:12px;background:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
-    .kpi .label{color:var(--muted);font-size:12px}
-    .kpi .value{font-weight:900;font-size:18px}
-    .mono{font-family:var(--mono)}
-    .progress,.miniProgress{height:10px;border-radius:999px;background:#eef2ff;border:1px solid var(--border);overflow:hidden}
-    .miniProgress{width:140px;height:9px;background:#f3f4f6}
-    .bar,.miniBar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue))}
-    .daysGrid{margin-top:10px}
-    .dayTile{grid-column:span 12;border:1px solid var(--border);border-radius:16px;background:#fff;padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;box-shadow:0 6px 18px rgba(17,24,39,.06)}
-    .dayLeft{display:flex;flex-direction:column;gap:4px;min-width:180px}
-    .dayTitle{font-weight:900;font-size:14px}
-    .daySub,.miniCount{color:var(--muted);font-size:12px}
-    .dayRight{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .badgeToday{font-size:12px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(37,99,235,.2);background:rgba(37,99,235,.08);color:#1e40af}
-    .divider{height:1px;background:var(--border);margin:12px 0}
-    .sessionTitle{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-    .sessionTitle h2{font-size:16px}
-    .timerTop,.exTop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
-    .timerValue{font:900 24px var(--mono)}
-    .timerHint{margin-top:4px;color:var(--muted);font-size:12px}
-    .exName{font-size:14px;font-weight:950}
-    .exDesc{margin-top:6px;color:var(--muted);font-size:12px;line-height:1.35;max-width:700px}
-    .exMeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .check{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:#fff;padding:8px 10px;border-radius:12px;cursor:pointer;user-select:none}
-    input[type="checkbox"]{width:18px;height:18px;accent-color:var(--green)}
-    .video{width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:14px;margin-top:10px}
-    .table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
-    .table th,.table td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left}
-    .table td{color:var(--muted)}
-    .toast{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(17,24,39,.92);color:#fff;padding:10px 12px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s ease}
-    .toast.show{opacity:1}
-    @media (min-width:760px){.kpi,.col6,.dayTile{grid-column:span 6}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programme Jérémy V2 Premium</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;background:#f5f7fb;margin:0;padding:0}
+header{background:white;padding:20px;text-align:center;font-weight:bold;font-size:20px;border-bottom:1px solid #eee}
+.container{padding:15px}
+.card{background:white;border-radius:15px;padding:15px;margin-bottom:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+.days{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.day{padding:15px;text-align:center;border-radius:12px;background:#eef2ff;cursor:pointer}
+.exercise{margin-bottom:20px}
+button{padding:10px 15px;border:none;border-radius:10px;background:#4f46e5;color:white;font-weight:bold;cursor:pointer}
+.timer{font-size:22px;margin:10px 0}
+.hidden{display:none}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <h1>Programme Jérémy — Coach évolutif 8 semaines</h1>
-        <p>Dashboard mensuel • Semaine automatique • Progression par phase • Un clic = ta séance</p>
-      </div>
-      <div class="topActions">
-        <button class="btn btnBlue" id="goToday">📌 Aujourd’hui</button>
-        <button class="btn btnWarn" id="prevWeek">← Semaine</button>
-        <button class="btn btnWarn" id="nextWeek">Semaine →</button>
-      </div>
-    </header>
+<header>Programme Jérémy 💪</header>
+<div class="container" id="home">
+<div class="card">
+<h3>📊 Dashboard</h3>
+<p>Semaine automatique ✔️</p>
+</div>
+<div class="card">
+<h3>📅 Semaine</h3>
+<div class="days">
+<div class="day" onclick="openDay('lundi')">Lundi</div>
+<div class="day" onclick="openDay('mercredi')">Mercredi</div>
+<div class="day" onclick="openDay('jeudi')">Jeudi</div>
+</div>
+</div>
+</div>
 
-    <section class="view active" id="viewHome">
-      <div class="grid">
-        <div class="card">
-          <div class="cardHeader">
-            <div>
-              <h2>📊 Dashboard</h2>
-              <div class="muted" id="monthLabel"></div>
-            </div>
-            <div class="pillRow" id="phasePills"></div>
-          </div>
-          <div class="cardBody">
-            <div class="kpiGrid">
-              <div class="kpi"><div><div class="label">Semaine programme</div><div class="value" id="kpiProgramWeek">1/8</div></div><span class="pill purple" id="kpiPhase">Phase 1</span></div>
-              <div class="kpi"><div><div class="label">Séances complètes ce mois</div><div class="value" id="kpiSessions">0</div></div><span class="pill good">objectif 12+</span></div>
-              <div class="kpi"><div><div class="label">Séries complétées</div><div class="value mono" id="kpiSets">0/0</div></div><span class="pill blue" id="kpiPct">0%</span></div>
-              <div class="kpi"><div><div class="label">Dernier poids / taille</div><div class="value mono" id="kpiBody">—</div></div><span class="pill">suivi</span></div>
-            </div>
-            <div class="progress" style="margin-top:10px"><div class="bar" id="monthBar"></div></div>
-            <div class="divider"></div>
-            <div class="twoCol">
-              <div class="col6">
-                <h3 style="font-size:14px">🗓️ Semaine affichée</h3>
-                <div class="muted" id="weekLabel" style="margin-top:6px"></div>
-                <div class="daysGrid" id="daysGrid"></div>
-              </div>
-              <div class="col6">
-                <h3 style="font-size:14px">⚙️ Réglages & mesures</h3>
-                <div class="exercise" style="margin-top:10px">
-                  <div class="row">
-                    <label class="muted" style="font-size:12px">Date de départ du programme
-                      <input class="input" id="programStartDate" type="date" />
-                    </label>
-                    <label class="muted" style="font-size:12px">Repos (sec)
-                      <select class="select" id="homeRest"><option>60</option><option selected>75</option><option>90</option></select>
-                    </label>
-                    <label class="muted" style="font-size:12px">Intensité
-                      <select class="select" id="homeLevel"><option value="debutant">Débutant</option><option value="standard" selected>Standard</option><option value="tonique">Tonique</option></select>
-                    </label>
-                  </div>
-                  <div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn btnPrimary" id="saveSettings">💾 Enregistrer</button></div>
-                </div>
-                <div class="exercise">
-                  <div class="row">
-                    <label class="muted" style="font-size:12px">Poids (kg)
-                      <input class="input" id="mWeight" type="number" min="30" max="200" step="0.1" placeholder="85.0" />
-                    </label>
-                    <label class="muted" style="font-size:12px">Tour de taille (cm)
-                      <input class="input" id="mWaist" type="number" min="40" max="160" step="0.5" placeholder="92" />
-                    </label>
-                    <label class="muted" style="font-size:12px;flex:1;min-width:220px">Note
-                      <input class="input" id="mNote" type="text" placeholder="énergie, fatigue, sensation..." style="width:100%;min-width:220px" />
-                    </label>
-                  </div>
-                  <div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn btnPrimary" id="addMeasure">➕ Ajouter</button><button class="btn btnDanger" id="clearMeasures">🗑️ Effacer</button></div>
-                </div>
-                <div class="exercise">
-                  <div class="pillRow"><span class="pill">Historique du mois</span></div>
-                  <div id="measureTableWrap"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="view" id="viewSession">
-      <div class="sessionTitle">
-        <div>
-          <h2 id="sessionTitle">Séance</h2>
-          <div class="muted" id="sessionSubtitle"></div>
-        </div>
-        <div class="pillRow">
-          <button class="btn" id="backHome">← Retour</button>
-          <button class="btn btnPrimary" id="markDayDone">✅ Tout cocher</button>
-        </div>
-      </div>
-      <div class="twoCol">
-        <div class="col6">
-          <div class="timer">
-            <div class="timerTop">
-              <div><div class="timerValue" id="timerText">01:15</div><div class="timerHint" id="timerHint">Timer prêt</div></div>
-              <div class="pillRow"><button class="btn btnBlue" id="timerStart">▶ Start</button><button class="btn" id="timerPause">⏸ Pause</button><button class="btn" id="timerReset">⟲ Reset</button></div>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-              <label class="muted" style="font-size:12px">Repos (sec)
-                <select class="select" id="rest"><option>60</option><option selected>75</option><option>90</option></select>
-              </label>
-              <label class="muted" style="font-size:12px">Intensité
-                <select class="select" id="level"><option value="debutant">Débutant</option><option value="standard" selected>Standard</option><option value="tonique">Tonique</option></select>
-              </label>
-              <label class="muted" style="font-size:12px"><input type="checkbox" id="autoTimer" style="vertical-align:middle;margin-right:6px">Auto-timer</label>
-              <label class="muted" style="font-size:12px"><input type="checkbox" id="sound" style="vertical-align:middle;margin-right:6px" checked>Bip début/fin</label>
-            </div>
-            <div class="progress" style="margin-top:12px"><div class="bar" id="dayBar"></div></div>
-            <div class="muted" style="margin-top:8px" id="dayProgressLabel">0/0 séries</div>
-          </div>
-        </div>
-        <div class="col6">
-          <div class="exercise">
-            <div class="pillRow" id="sessionPills"></div>
-            <div class="muted" style="margin-top:10px" id="sessionNote"></div>
-          </div>
-        </div>
-      </div>
-      <div id="sessionExercises"></div>
-    </section>
-  </div>
-  <div class="toast" id="toast">Sauvegardé ✅</div>
+<div class="container hidden" id="session">
+<button onclick="back()">⬅ Retour</button>
+<div id="content"></div>
+</div>
 
 <script>
-const EX = {
-  pushups:{name:'Pompes', desc:'Gainage serré, poitrine vers le sol. Variante genoux si besoin.', video:'https://www.youtube.com/embed/IODxDxX7oi4'},
-  closePushups:{name:'Pompes serrées', desc:'Mains plus proches, coudes près du corps. Variante genoux OK.', video:'https://www.youtube.com/embed/0pkjOk0EiAk'},
-  cableFly:{name:'Poulie — Écarté poitrine', desc:'Contraction maximale des pectoraux, mouvement contrôlé.', video:'https://www.youtube.com/embed/taI4XduLpTk'},
-  cableCrossover:{name:'Poulie — Crossover', desc:'Trajectoire fluide, cage thoracique ouverte, contrôle total.', video:'https://www.youtube.com/embed/taI4XduLpTk'},
-  shoulderPress:{name:'Développé épaules haltères', desc:'Buste gainé, pas de cambrure, amplitude contrôlée.', video:'https://www.youtube.com/embed/qEwKCR5JCog'},
-  lateralRaise:{name:'Élévations latérales', desc:'Légères, lentes, épaules basses, pas d’élan.', video:'https://www.youtube.com/embed/3VcKaXpzqRo'},
-  cableRow:{name:'Poulie — Tirage horizontal', desc:'Tire les coudes en arrière, poitrine sortie, omoplates actives.', video:'https://www.youtube.com/embed/GZbfZ033f74'},
-  latPulldown:{name:'Poulie — Tirage vertical', desc:'Tire vers le haut de poitrine sans te balancer.', video:'https://www.youtube.com/embed/CAwf7n6Luuc'},
-  dumbbellRow:{name:'Rowing haltères', desc:'Dos plat, traction vers la hanche, contrôle en bas.', video:'https://www.youtube.com/embed/pYcpY20QaE8'},
-  bicepsCurl:{name:'Curl biceps', desc:'Coudes collés, pas d’élan, descente lente.', video:'https://www.youtube.com/embed/ykJmrZ5v0Oo'},
-  tricepsCable:{name:'Triceps poulie', desc:'Coudes fixes, extension complète, retour contrôlé.', video:'https://www.youtube.com/embed/2-LAMcpzODU'},
-  rearDeltCable:{name:'Arrière d’épaules poulie', desc:'Léger, propre, excellent pour la posture.', video:'https://www.youtube.com/embed/EA7u4Q_8HQ0'},
-  shrugs:{name:'Shrugs haltères', desc:'Hausse les épaules sans rouler, contraction en haut.', video:'https://www.youtube.com/embed/cJRVVxmytaM'},
-  plank:{name:'Planche', desc:'Corps aligné, respiration calme, nombril rentré.', video:'https://www.youtube.com/embed/pSHjTRCQxIw'},
-  sidePlank:{name:'Gainage latéral', desc:'Hanche haute, épaule au-dessus du coude.', video:'https://www.youtube.com/embed/XeN4pEZZJNI'},
-  inclineCrunch:{name:'Crunch sur planche inclinée', desc:'Monte sans tirer sur la nuque, contrôle en descente.', video:'https://www.youtube.com/embed/Xyd_fa5zoEU'},
-  mountainClimbers:{name:'Mountain climbers', desc:'Hanches stables, rythme propre.', video:'https://www.youtube.com/embed/CQk4MHY2_Tc'},
-  russianTwist:{name:'Russian twists', desc:'Rotation du buste, mouvement contrôlé.', video:'https://www.youtube.com/embed/wkD8rjkodUI'}
+const data={
+ lundi:[
+  {name:'Poulie Crossover',video:'https://www.youtube.com/embed/bMNGiVvBzuA'},
+  {name:'Développé épaules haltères',video:'https://www.youtube.com/embed/B-aVuyhvLHU'},
+  {name:'Élévations latérales',video:'https://www.youtube.com/embed/3VcKaXpzqRo'}
+ ],
+ mercredi:[
+  {name:'Tirage vertical',video:'https://www.youtube.com/embed/dOukQ7QBSQs'},
+  {name:'Tirage horizontal',video:'https://www.youtube.com/embed/KHoIpdn-oNI'},
+  {name:'Curl biceps',video:'https://www.youtube.com/embed/ykJmrZ5v0Oo'}
+ ],
+ jeudi:[
+  {name:'Crossover poulie',video:'https://www.youtube.com/embed/bMNGiVvBzuA'},
+  {name:'Arrière épaules poulie',video:'https://www.youtube.com/embed/EA7u4Q_8HQ0'},
+  {name:'Shrugs',video:'https://www.youtube.com/embed/cJRVVxmytaM'}
+ ]
 };
 
-function phaseForWeek(week){
-  if(week <= 2) return {name:'Phase 1', label:'Technique & activation', color:'purple'};
-  if(week <= 5) return {name:'Phase 2', label:'Hypertrophie & volume', color:'blue'};
-  return {name:'Phase 3', label:'Intensification & dessin', color:'good'};
+function openDay(day){
+ document.getElementById('home').classList.add('hidden');
+ document.getElementById('session').classList.remove('hidden');
+ const container=document.getElementById('content');
+ container.innerHTML='';
+ data[day].forEach((ex,i)=>{
+  container.innerHTML+=`
+   <div class="card exercise">
+   <h3>${ex.name}</h3>
+   <iframe width="100%" height="200" src="${ex.video}" frameborder="0" allowfullscreen></iframe>
+   <div>
+    <label><input type="checkbox"> Série 1</label><br>
+    <label><input type="checkbox"> Série 2</label><br>
+    <label><input type="checkbox"> Série 3</label>
+   </div>
+   <button onclick="startTimer()">⏱ Lancer repos</button>
+   </div>
+  `;
+ });
 }
 
-function spec(key, sets, reps, note=''){
-  return {key, sets, reps, note};
+function back(){
+ document.getElementById('session').classList.add('hidden');
+ document.getElementById('home').classList.remove('hidden');
 }
 
-function getPlanForProgramWeek(week){
-  if(week <= 2){
-    return [
-      {day:'Lundi', tag:'Pecs • Épaules • Abdos', note:'Phase 1 : apprendre, sentir, contrôler.', blocks:[
-        spec('cableFly',3,'12'), spec('shoulderPress',3,'10'), spec('lateralRaise',3,'12'), spec('pushups',3,'max propre'), spec('plank',3,'30 sec')
-      ]},
-      {day:'Mardi', tag:'⚽ Foot', note:'Hydratation + mobilité légère.', blocks:[]},
-      {day:'Mercredi', tag:'Dos • Bras • Gainage', note:'Posture, dos et bras.', blocks:[
-        spec('cableRow',3,'12'), spec('latPulldown',3,'10'), spec('bicepsCurl',3,'12'), spec('tricepsCable',3,'12'), spec('sidePlank',3,'30 sec / côté')
-      ]},
-      {day:'Jeudi', tag:'Full haut du corps', note:'Rappel technique sans t’épuiser.', blocks:[
-        spec('cableCrossover',3,'12'), spec('dumbbellRow',3,'10'), spec('lateralRaise',3,'12'), spec('inclineCrunch',3,'15')
-      ]},
-      {day:'Vendredi', tag:'⚽ Foot', note:'Étirements + sommeil.', blocks:[]},
-      {day:'Samedi', tag:'Optionnel • Abdos / cardio', note:'Court et propre.', blocks:[
-        spec('mountainClimbers',3,'20 sec'), spec('russianTwist',3,'20'), spec('plank',3,'30 sec')
-      ]},
-      {day:'Dimanche', tag:'Repos / marche', note:'Marche 30 à 60 min si possible.', blocks:[]}
-    ];
-  }
-  if(week <= 5){
-    return [
-      {day:'Lundi', tag:'Pecs • Épaules • Abdos', note:'Phase 2 : plus de volume, tempo lent.', blocks:[
-        spec('cableFly',4,'12–15','3 sec sur la descente'), spec('shoulderPress',4,'10–12'), spec('lateralRaise',4,'15'), spec('pushups',3,'max lent'), spec('plank',4,'40–45 sec')
-      ]},
-      {day:'Mardi', tag:'⚽ Foot', note:'Récupération active.', blocks:[]},
-      {day:'Mercredi', tag:'Dos • Bras • Gainage', note:'Volume dos/bras.', blocks:[
-        spec('cableRow',4,'12'), spec('latPulldown',4,'10–12'), spec('bicepsCurl',4,'12'), spec('tricepsCable',4,'12'), spec('sidePlank',4,'40 sec / côté')
-      ]},
-      {day:'Jeudi', tag:'Full haut du corps', note:'Congestion et posture.', blocks:[
-        spec('cableCrossover',4,'12'), spec('dumbbellRow',4,'12'), spec('rearDeltCable',4,'15'), spec('inclineCrunch',4,'18')
-      ]},
-      {day:'Vendredi', tag:'⚽ Foot', note:'Hydratation + sommeil.', blocks:[]},
-      {day:'Samedi', tag:'Optionnel • Abdos / cardio', note:'Brûle-graisse court.', blocks:[
-        spec('mountainClimbers',3,'30 sec'), spec('russianTwist',3,'24'), spec('plank',3,'45 sec')
-      ]},
-      {day:'Dimanche', tag:'Repos / marche', note:'Repos complet ou marche.', blocks:[]}
-    ];
-  }
-  return [
-    {day:'Lundi', tag:'Pecs • Épaules • Abdos', note:'Phase 3 : intensité et dessin musculaire.', blocks:[
-      spec('cableFly',4,'15'), spec('shoulderPress',4,'12'), spec('lateralRaise',4,'15 + drop set','finis léger sans tricher'), spec('pushups',4,'max'), spec('plank',4,'50–60 sec')
-    ]},
-    {day:'Mardi', tag:'⚽ Foot', note:'Garde du jus pour le terrain.', blocks:[]},
-    {day:'Mercredi', tag:'Dos • Bras • Gainage', note:'Plus dense, sans sacrifier la technique.', blocks:[
-      spec('cableRow',4,'12 lourd'), spec('latPulldown',4,'10'), spec('bicepsCurl',4,'12 lent'), spec('tricepsCable',4,'12'), spec('sidePlank',4,'45 sec / côté')
-    ]},
-    {day:'Jeudi', tag:'Full haut du corps', note:'Finition esthétique + posture.', blocks:[
-      spec('cableCrossover',4,'12'), spec('rearDeltCable',4,'15'), spec('shrugs',4,'15'), spec('mountainClimbers',3,'30 sec'), spec('russianTwist',3,'20'), spec('plank',3,'45 sec')
-    ]},
-    {day:'Vendredi', tag:'⚽ Foot', note:'Récupération, mobilité, sommeil.', blocks:[]},
-    {day:'Samedi', tag:'Optionnel • Abdos / cardio', note:'Option bonus si tu as de l’énergie.', blocks:[
-      spec('inclineCrunch',3,'20'), spec('mountainClimbers',3,'35 sec'), spec('plank',3,'60 sec')
-    ]},
-    {day:'Dimanche', tag:'Repos / marche', note:'Repos complet ou marche détendue.', blocks:[]}
-  ];
+function startTimer(){
+ let time=60;
+ const t=setInterval(()=>{
+  if(time<=0){clearInterval(t);alert('Repos terminé 💪');}
+  time--;
+ },1000);
 }
-
-function getMonday(d=new Date()){const date=new Date(d);const day=(date.getDay()+6)%7;date.setHours(0,0,0,0);date.setDate(date.getDate()-day);return date;}
-function fmtDateShort(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'});}
-function pad2(n){return String(n).padStart(2,'0');}
-function monthKey(d=new Date()){return `jeremy_month_${d.getFullYear()}-${pad2(d.getMonth()+1)}`;}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._to);toast._to=setTimeout(()=>t.classList.remove('show'),900);}
-
-const MKEY = monthKey(new Date());
-const stateDefault = {settings:{restSeconds:75,level:'standard',autoTimer:true,sound:true,programStartDate:''},weeks:{},measures:[]};
-const state = JSON.parse(localStorage.getItem(MKEY) || 'null') || structuredClone(stateDefault);
-function save(){localStorage.setItem(MKEY, JSON.stringify(state));toast('Sauvegardé ✅');}
-(function migrate(){state.settings = Object.assign(structuredClone(stateDefault.settings), state.settings || {});state.weeks = state.weeks || {};state.measures = state.measures || [];if(!state.settings.programStartDate){const d=new Date();state.settings.programStartDate = d.toISOString().slice(0,10);}})();
-
-function getProgramWeekForDate(d=new Date()){
-  const start = new Date(state.settings.programStartDate + 'T00:00:00');
-  const current = new Date(d); current.setHours(0,0,0,0);
-  const diff = Math.floor((current - start) / (1000*60*60*24));
-  if(diff < 0) return 1;
-  return Math.min(8, Math.floor(diff/7)+1);
-}
-
-function getWeekKey(monday, programWeek){return `week_${monday.toISOString().slice(0,10)}_p${programWeek}`;}
-function weekState(monday, programWeek){const wk = getWeekKey(monday, programWeek); if(!state.weeks[wk]) state.weeks[wk] = {checks:{}}; return state.weeks[wk];}
-
-function getDayDateFromIndex(monday, dayIndex){const d=new Date(monday);d.setDate(d.getDate()+dayIndex);return d;}
-function isToday(dayDate){return dayDate.toDateString() === new Date().toDateString();}
-function setId(weekKey, dayIndex, exIndex, setNum){return `${weekKey}_${dayIndex}_${exIndex}_set${setNum}`;}
-
-let currentMonday = getMonday(new Date());
-let currentProgramWeek = getProgramWeekForDate(new Date());
-let currentDayIndex = 0;
-
-const viewHome = document.getElementById('viewHome');
-const viewSession = document.getElementById('viewSession');
-function showHome(){viewSession.classList.remove('active');viewHome.classList.add('active');}
-function showSession(){viewHome.classList.remove('active');viewSession.classList.add('active');}
-
-function computeMonthStats(){
-  let totalSets=0, doneSets=0, fullSessions=0;
-  for(const wkName of Object.keys(state.weeks || {})){
-    const w = state.weeks[wkName];
-    const m = wkName.match(/_p(\d+)$/); const pWeek = m ? Number(m[1]) : 1;
-    const plan = getPlanForProgramWeek(pWeek);
-    plan.forEach((day, dayIndex)=>{
-      const totalDay = day.blocks.reduce((a,b)=>a+b.sets,0);
-      totalSets += totalDay;
-      let doneDay = 0;
-      day.blocks.forEach((ex, exIndex)=>{for(let s=1;s<=ex.sets;s++){if(w.checks[setId(wkName, dayIndex, exIndex, s)]) doneDay++;}});
-      doneSets += doneDay;
-      if(totalDay > 0 && doneDay === totalDay) fullSessions++;
-    });
-  }
-  const pct = totalSets ? Math.round((doneSets/totalSets)*100) : 0;
-  const measures = [...(state.measures||[])].sort((a,b)=>b.ts-a.ts);
-  const last = measures[0] || null;
-  return {totalSets, doneSets, pct, fullSessions, lastWeight:last?.weight ?? null, lastWaist:last?.waist ?? null};
-}
-
-function renderMeasures(){
-  const wrap = document.getElementById('measureTableWrap');
-  const measures = [...(state.measures||[])].sort((a,b)=>b.ts-a.ts);
-  if(!measures.length){wrap.innerHTML = `<div class="muted" style="margin-top:10px">Aucune mesure enregistrée ce mois-ci.</div>`; return;}
-  const rows = measures.map(m=>{
-    const d = new Date(m.ts).toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-    return `<tr><td>${d}</td><td>${m.weight || '—'}</td><td>${m.waist || '—'}</td><td>${(m.note||'—').replaceAll('<','&lt;').replaceAll('>','&gt;')}</td></tr>`;
-  }).join('');
-  wrap.innerHTML = `<table class="table"><thead><tr><th>Date</th><th>Poids</th><th>Taille</th><th>Note</th></tr></thead><tbody>${rows}</tbody></table>`;
-}
-
-function renderHome(){
-  currentProgramWeek = getProgramWeekForDate(currentMonday);
-  const phase = phaseForWeek(currentProgramWeek);
-  const plan = getPlanForProgramWeek(currentProgramWeek);
-  const weekKey = getWeekKey(currentMonday, currentProgramWeek);
-  const wk = weekState(currentMonday, currentProgramWeek);
-  const sunday = new Date(currentMonday); sunday.setDate(sunday.getDate()+6);
-
-  const monthName = new Date().toLocaleDateString('fr-FR',{month:'long', year:'numeric'});
-  document.getElementById('monthLabel').textContent = `${monthName.charAt(0).toUpperCase()+monthName.slice(1)} • départ: ${state.settings.programStartDate}`;
-  document.getElementById('phasePills').innerHTML = `
-    <span class="pill purple">🔥 Semaine programme ${currentProgramWeek}/8</span>
-    <span class="pill ${phase.color}">${phase.name} • ${phase.label}</span>
-    <span class="pill blue">⏱ repos ${state.settings.restSeconds}s</span>
-    <span class="pill">🏋 ${state.settings.level}</span>`;
-
-  const stats = computeMonthStats();
-  document.getElementById('kpiProgramWeek').textContent = `${currentProgramWeek}/8`;
-  document.getElementById('kpiPhase').textContent = phase.name;
-  document.getElementById('kpiSessions').textContent = stats.fullSessions;
-  document.getElementById('kpiSets').textContent = `${stats.doneSets}/${stats.totalSets}`;
-  document.getElementById('kpiPct').textContent = `${stats.pct}%`;
-  document.getElementById('kpiBody').textContent = `${stats.lastWeight ?? '—'} / ${stats.lastWaist ?? '—'}`;
-  document.getElementById('monthBar').style.width = `${stats.pct}%`;
-  document.getElementById('weekLabel').textContent = `${fmtDateShort(currentMonday)} → ${fmtDateShort(sunday)} • ${phase.name}`;
-
-  const daysGrid = document.getElementById('daysGrid');
-  daysGrid.innerHTML = '';
-  plan.forEach((day, dayIndex)=>{
-    const d = getDayDateFromIndex(currentMonday, dayIndex);
-    const total = day.blocks.reduce((a,b)=>a+b.sets,0);
-    let done = 0;
-    day.blocks.forEach((ex, exIndex)=>{for(let s=1;s<=ex.sets;s++){if(wk.checks[setId(weekKey, dayIndex, exIndex, s)]) done++;}});
-    const pct = total ? Math.round((done/total)*100) : 100;
-    const tile = document.createElement('div');
-    tile.className = 'dayTile';
-    tile.innerHTML = `
-      <div class="dayLeft">
-        <div class="dayTitle">${day.day} — ${day.tag}</div>
-        <div class="daySub">🗓 ${fmtDateShort(d)} • ${day.blocks.length ? 'séance' : 'repos / foot'}</div>
-      </div>
-      <div class="dayRight">
-        ${isToday(d) ? `<span class="badgeToday">Aujourd’hui</span>` : ''}
-        <div class="miniProgress"><div class="miniBar" style="width:${pct}%"></div></div>
-        <div class="miniCount">${day.blocks.length ? `${done}/${total}` : '—'}</div>
-        <span class="pill ${pct>=70?'good':(pct>=40?'warn':'blue')}">${pct}%</span>
-      </div>`;
-    tile.addEventListener('click', ()=>openSession(dayIndex));
-    daysGrid.appendChild(tile);
-  });
-
-  document.getElementById('programStartDate').value = state.settings.programStartDate;
-  document.getElementById('homeRest').value = String(state.settings.restSeconds);
-  document.getElementById('homeLevel').value = state.settings.level;
-  renderMeasures();
-}
-
-function renderDayProgress(){
-  const plan = getPlanForProgramWeek(currentProgramWeek);
-  const weekKey = getWeekKey(currentMonday, currentProgramWeek);
-  const wk = weekState(currentMonday, currentProgramWeek);
-  const day = plan[currentDayIndex];
-  const total = day.blocks.reduce((a,b)=>a+b.sets,0);
-  let done = 0;
-  day.blocks.forEach((ex, exIndex)=>{for(let s=1;s<=ex.sets;s++){if(wk.checks[setId(weekKey, currentDayIndex, exIndex, s)]) done++;}});
-  const pct = total ? Math.round((done/total)*100) : 100;
-  document.getElementById('dayBar').style.width = `${pct}%`;
-  document.getElementById('dayProgressLabel').textContent = `${done}/${total} séries • ${pct}%`;
-}
-
-function openSession(dayIndex){
-  currentProgramWeek = getProgramWeekForDate(currentMonday);
-  currentDayIndex = dayIndex;
-  const plan = getPlanForProgramWeek(currentProgramWeek);
-  const phase = phaseForWeek(currentProgramWeek);
-  const day = plan[dayIndex];
-  const weekKey = getWeekKey(currentMonday, currentProgramWeek);
-  const wk = weekState(currentMonday, currentProgramWeek);
-  const dayDate = getDayDateFromIndex(currentMonday, dayIndex);
-
-  document.getElementById('sessionTitle').textContent = `${day.day} — ${day.tag}`;
-  document.getElementById('sessionSubtitle').textContent = `${fmtDateShort(dayDate)} • Semaine programme ${currentProgramWeek}/8`;
-  document.getElementById('sessionPills').innerHTML = `
-    <span class="pill purple">${phase.name}</span>
-    <span class="pill ${phase.color}">${phase.label}</span>
-    <span class="pill blue">⏱ repos ${state.settings.restSeconds}s</span>
-    <span class="pill">🏋 ${state.settings.level}</span>`;
-  document.getElementById('sessionNote').textContent = day.note;
-
-  document.getElementById('rest').value = String(state.settings.restSeconds);
-  document.getElementById('level').value = state.settings.level;
-  document.getElementById('autoTimer').checked = !!state.settings.autoTimer;
-  document.getElementById('sound').checked = !!state.settings.sound;
-
-  const wrap = document.getElementById('sessionExercises');
-  wrap.innerHTML = '';
-  if(!day.blocks.length){
-    const empty = document.createElement('div');
-    empty.className = 'emptyState';
-    empty.innerHTML = `<div class="exName">✅ Rien à cocher ici</div><div class="exDesc">Profite de ton foot ou de ton repos. Marche légère et hydratation = bonus.</div>`;
-    wrap.appendChild(empty);
-  } else {
-    day.blocks.forEach((b, exIndex)=>{
-      const def = EX[b.key];
-      const box = document.createElement('div');
-      box.className = 'exercise';
-      box.innerHTML = `
-        <div class="exTop">
-          <div>
-            <div class="exName">${def.name}</div>
-            <div class="exDesc">${def.desc}${b.note ? ' • ' + b.note : ''}</div>
-            <div class="exMeta">
-              <span class="pill">🧠 ${b.sets} séries</span>
-              <span class="pill">🔁 ${b.reps}</span>
-              <span class="pill">⏱ repos ${state.settings.restSeconds}s</span>
-            </div>
-          </div>
-          <div class="pillRow"><span class="pill good">2 reps en réserve</span><span class="pill">forme propre</span></div>
-        </div>
-        <div class="row" id="sets_${exIndex}"></div>
-        <iframe class="video" src="${def.video}" title="Vidéo : ${def.name}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-      const setsRow = box.querySelector(`#sets_${exIndex}`);
-      for(let s=1;s<=b.sets;s++){
-        const id = setId(weekKey, dayIndex, exIndex, s);
-        const label = document.createElement('label');
-        label.className = 'check';
-        label.innerHTML = `<input type="checkbox" ${wk.checks[id] ? 'checked' : ''}><span>Série ${s}</span>`;
-        const cb = label.querySelector('input');
-        cb.addEventListener('change', ()=>{
-          wk.checks[id] = cb.checked;
-          save();
-          renderDayProgress();
-          renderHome();
-          if(cb.checked && state.settings.autoTimer) startTimer(state.settings.restSeconds);
-        });
-        setsRow.appendChild(label);
-      }
-      const quick = document.createElement('button');
-      quick.className = 'btn btnBlue';
-      quick.textContent = '⏱ Repos';
-      quick.addEventListener('click', ()=>startTimer(state.settings.restSeconds));
-      setsRow.appendChild(quick);
-      wrap.appendChild(box);
-    });
-  }
-  renderDayProgress();
-  resetTimer();
-  showSession();
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-let timerInterval = null, remaining = 0, running = false;
-function fmtMMSS(sec){const s=Math.max(0,Math.floor(sec));const m=Math.floor(s/60);const r=s%60;return `${String(m).padStart(2,'0')}:${String(r).padStart(2,'0')}`;}
-function updateTimerUI(){document.getElementById('timerText').textContent = fmtMMSS(remaining || state.settings.restSeconds || 75);document.getElementById('timerHint').textContent = running ? '⏳ en cours' : '⏸ prêt';}
-function beep(frequency=880,durationMs=120,volume=0.12){if(!state.settings.sound) return;try{const AudioCtx=window.AudioContext||window.webkitAudioContext;const ctx=new AudioCtx();const osc=ctx.createOscillator();const gain=ctx.createGain();osc.type='sine';osc.frequency.value=frequency;gain.gain.value=volume;osc.connect(gain);gain.connect(ctx.destination);osc.start();setTimeout(()=>{osc.stop();ctx.close();},durationMs);}catch(e){}}
-function startTimer(sec){remaining = Number(sec || state.settings.restSeconds || 75); running = true; beep(740,100); clearInterval(timerInterval); timerInterval = setInterval(()=>{remaining -= 1; if(remaining <= 0){remaining = 0; stopTimer(true);} updateTimerUI();},1000); updateTimerUI();}
-function stopTimer(finished){clearInterval(timerInterval);timerInterval=null;running=false;if(finished){beep(988,120);setTimeout(()=>beep(988,120),140);}updateTimerUI();}
-function pauseTimer(){if(!running) return;clearInterval(timerInterval);timerInterval=null;running=false;updateTimerUI();}
-function resetTimer(){stopTimer(false);remaining = Number(state.settings.restSeconds || 75);updateTimerUI();}
-
-document.getElementById('timerStart').addEventListener('click', ()=>startTimer(state.settings.restSeconds));
-document.getElementById('timerPause').addEventListener('click', pauseTimer);
-document.getElementById('timerReset').addEventListener('click', resetTimer);
-
-document.getElementById('saveSettings').addEventListener('click', ()=>{
-  state.settings.programStartDate = document.getElementById('programStartDate').value || state.settings.programStartDate;
-  state.settings.restSeconds = Number(document.getElementById('homeRest').value || 75);
-  state.settings.level = document.getElementById('homeLevel').value || 'standard';
-  save();
-  currentProgramWeek = getProgramWeekForDate(currentMonday);
-  renderHome();
-});
-
-document.getElementById('homeRest').addEventListener('change', ()=>{state.settings.restSeconds = Number(document.getElementById('homeRest').value || 75); save(); renderHome();});
-document.getElementById('homeLevel').addEventListener('change', ()=>{state.settings.level = document.getElementById('homeLevel').value || 'standard'; save(); renderHome();});
-document.getElementById('rest').addEventListener('change', ()=>{state.settings.restSeconds = Number(document.getElementById('rest').value || 75); save(); renderDayProgress(); renderHome(); resetTimer();});
-document.getElementById('level').addEventListener('change', ()=>{state.settings.level = document.getElementById('level').value || 'standard'; save(); renderHome(); openSession(currentDayIndex);});
-document.getElementById('autoTimer').addEventListener('change', ()=>{state.settings.autoTimer = document.getElementById('autoTimer').checked; save();});
-document.getElementById('sound').addEventListener('change', ()=>{state.settings.sound = document.getElementById('sound').checked; save();});
-
-document.getElementById('addMeasure').addEventListener('click', ()=>{
-  const weight = document.getElementById('mWeight').value; const waist = document.getElementById('mWaist').value; const note = document.getElementById('mNote').value;
-  if(weight==='' && waist==='' && (note||'').trim()===''){alert('Ajoute au moins un champ.'); return;}
-  state.measures.push({ts:Date.now(), weight: weight==='' ? '' : Number(weight), waist: waist==='' ? '' : Number(waist), note:(note||'').trim()});
-  document.getElementById('mWeight').value=''; document.getElementById('mWaist').value=''; document.getElementById('mNote').value='';
-  save(); renderMeasures(); renderHome();
-});
-
-document.getElementById('clearMeasures').addEventListener('click', ()=>{if(confirm('Effacer tout l’historique du mois ?')){state.measures=[]; save(); renderMeasures(); renderHome();}});
-document.getElementById('backHome').addEventListener('click', ()=>{showHome(); window.scrollTo({top:0,behavior:'smooth'});});
-document.getElementById('markDayDone').addEventListener('click', ()=>{
-  const plan = getPlanForProgramWeek(currentProgramWeek); const day = plan[currentDayIndex]; if(!day.blocks.length){alert('Jour foot/repos : rien à cocher.'); return;}
-  const weekKey = getWeekKey(currentMonday, currentProgramWeek); const wk = weekState(currentMonday, currentProgramWeek);
-  day.blocks.forEach((ex, exIndex)=>{for(let s=1;s<=ex.sets;s++){wk.checks[setId(weekKey, currentDayIndex, exIndex, s)] = true;}});
-  save(); renderDayProgress(); renderHome(); toast('Séance cochée ✅');
-});
-
-document.getElementById('goToday').addEventListener('click', ()=>{currentMonday = getMonday(new Date()); renderHome(); openSession((new Date().getDay()+6)%7);});
-document.getElementById('prevWeek').addEventListener('click', ()=>{currentMonday.setDate(currentMonday.getDate()-7); currentMonday = getMonday(currentMonday); renderHome(); showHome();});
-document.getElementById('nextWeek').addEventListener('click', ()=>{currentMonday.setDate(currentMonday.getDate()+7); currentMonday = getMonday(currentMonday); renderHome(); showHome();});
-
-renderHome(); updateTimerUI();
 </script>
 </body>
 </html>
